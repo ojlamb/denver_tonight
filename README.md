@@ -1,5 +1,5 @@
 # denver-tonight
-A nightly event aggregator for Oakland, CA
+A nightly event aggregator for Denver, CO
 
 ##install
 
