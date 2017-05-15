@@ -74,6 +74,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     html += '<div id="soon">'
 
     venues.forEach(function(venue){
+		console.log(venue);
       if(venue.soon.length > 0) html += '<h3><a class="venue-link" href="'+venue.venueURL+'">'+venue.venue+'</a></h3>'
       venue.soon.forEach(function(show, i){
         if(i > 0) html += '<hr>'
@@ -88,7 +89,8 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
 
     html += '</div>'
 
-    page = page.split('{{content}}').join(html)
+    page = page.split('{{content}}').join(html);
+	//TODO I could run this on a weekly bases, and send as an email
 	console.log(page);
 
     fs.writeFileSync(__dirname+'/index.html', page)
