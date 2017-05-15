@@ -38,9 +38,9 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     shows.forEach(function(show){
       if(!venueHash[show.venue]) venueHash[show.venue] = {venue: show.venue, venueURL: show.venueURL, tonight: [], soon: []}
       if(show.date === year+'-'+month+'-'+day)
-        console.log("PUSH SHOW",show),venueHash[show.venue].tonight.push(show)
+        venueHash[show.venue].tonight.push(show)
       else if(show.date > year+'-'+month+'-'+day && show.date <= oneWeek)
-        venueHash[show.venue].soon.push(show)
+        console.log("PUSH SHOW",show),venueHash[show.venue].soon.push(show)
     })
     venues = Object.keys(venueHash).map(function(key){
       return venueHash[key]
