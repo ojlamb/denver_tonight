@@ -17,8 +17,7 @@ module.exports = function(done) {
 		var day = $(this).find('.eventInfo .eventDay').text();
 		if(day.length === 1) day = '0'+day;
 		var month = $(this).find('.eventInfo .eventMonth').text();
-		var monthNum = { 'Jan': 01, 'Feb': 02, 'Mar': 03, 'Apr': 04, 'May': 05, 'Jun': 06,'Jul': 07, 'Aug': 08, 'Sep': 09, 'Oct': 10, 'Nov': 11, 'Dec': 12
-		}
+		var monthNum = { 'Jan': 01, 'Feb': 02, 'Mar': 03, 'Apr': 04, 'May': 05, 'Jun': 06,'Jul': 07, 'Aug': 08, 'Sep': 09, 'Oct': 10, 'Nov': 11, 'Dec': 12 }
 		var year = (new Date()).getFullYear()
         var show = {
           venue: 'The Fillmore Auditorium',
