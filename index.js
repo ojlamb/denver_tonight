@@ -33,10 +33,11 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     var day = today.getDate().toString()
     if(day.length === 1) day = '0' + day
     var oneWeek = moment(year+'-'+month+'-'+day).add(15, 'days').format('YYYY-MM-DD')
-
+	console.log(oneWeek)
     var venueHash = {};
     shows.forEach(function(show){
-      if(!venueHash[show.venue]) venueHash[show.venue] = {venue: show.venue, venueURL: show.venueURL, tonight: [], soon: []}
+		console.log(show, show.date);
+	  if(!venueHash[show.venue]) venueHash[show.venue] = {venue: show.venue, venueURL: show.venueURL, tonight: [], soon: []}
       if(show.date === year+'-'+month+'-'+day)
         venueHash[show.venue].tonight.push(show)
       else if(show.date > year+'-'+month+'-'+day && show.date <= oneWeek)
