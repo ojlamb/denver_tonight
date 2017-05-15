@@ -24,7 +24,7 @@ module.exports = function(done) {
           venue: 'The Fillmore Auditorium',
           venueURL: 'http://www.fillmoreauditorium.org/',
           date: year + "-" + monthNum[month] + "-" + day,
-          time: '8:00',
+          time: '8:00 pm',
           url: $(this).find('h3 a').attr('href')
         }
         show.title = $(this).find('h3 a').text();

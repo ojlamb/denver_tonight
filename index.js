@@ -36,7 +36,6 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
 
     var venueHash = {};
     shows.forEach(function(show){
-		if(show.venue = "The Fillmore Auditorium") console.log('the fillmore!', show)
       if(!venueHash[show.venue]) venueHash[show.venue] = {venue: show.venue, venueURL: show.venueURL, tonight: [], soon: []}
       if(show.date === year+'-'+month+'-'+day)
         venueHash[show.venue].tonight.push(show)
