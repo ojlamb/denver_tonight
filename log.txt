@@ -624,3 +624,9 @@
 [Fri Jul 15 2016 04:00:01 GMT-0400 (EDT)] [info] fetching sources
 [Fri Jul 15 2016 04:00:05 GMT-0400 (EDT)] [info] found 262 total shows
 [Fri Jul 15 2016 04:00:05 GMT-0400 (EDT)] [info] wrote page
+[Sun May 14 2017 20:59:16 GMT-0600 (MDT)] [info] fetching sources
+[Sun May 14 2017 20:59:52 GMT-0600 (MDT)] [info] fetching sources
+[Sun May 14 2017 21:00:39 GMT-0600 (MDT)] [info] fetching sources
+[Sun May 14 2017 21:00:54 GMT-0600 (MDT)] [info] fetching sources
+[Sun May 14 2017 21:00:55 GMT-0600 (MDT)] [info] found 165 total shows
+[Sun May 14 2017 21:00:55 GMT-0600 (MDT)] [info] wrote page
