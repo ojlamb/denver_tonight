@@ -89,6 +89,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     html += '</div>'
 
     page = page.split('{{content}}').join(html)
+	console.log(page);
 
     fs.writeFileSync(__dirname+'/index.html', page)
 
