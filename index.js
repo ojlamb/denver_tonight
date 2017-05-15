@@ -37,6 +37,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     var venueHash = {};
     shows.forEach(function(show){
       if(!venueHash[show.venue]) venueHash[show.venue] = {venue: show.venue, venueURL: show.venueURL, tonight: [], soon: []}
+	  console.log(show)
       if(show.date === year+'-'+month+'-'+day)
         venueHash[show.venue].tonight.push(show)
       else if(show.date > year+'-'+month+'-'+day && show.date <= oneWeek)
@@ -74,7 +75,6 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     html += '<div id="soon">'
 
     venues.forEach(function(venue){
-		console.log(venue);
       if(venue.soon.length > 0) html += '<h3><a class="venue-link" href="'+venue.venueURL+'">'+venue.venue+'</a></h3>'
       venue.soon.forEach(function(show, i){
         if(i > 0) html += '<hr>'

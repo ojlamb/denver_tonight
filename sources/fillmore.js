@@ -27,7 +27,6 @@ module.exports = function(done) {
         }
         show.title = $(this).find('h3 a').text();
         shows.push(show)
-		console.log(show)
       })
 
       done(null, shows)
