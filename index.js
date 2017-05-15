@@ -16,6 +16,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
   q.awaitAll(function(errs, results){
     var shows = []
     results.forEach(function(venue){
+	  console.log(venue);
       shows = shows.concat(venue)
     })
 
@@ -91,7 +92,6 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
 
     page = page.split('{{content}}').join(html);
 	//TODO I could run this on a weekly bases, and send as an email
-	console.log(page);
 
     fs.writeFileSync(__dirname+'/index.html', page)
 
