@@ -32,7 +32,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     if(month.length === 1) month = '0' + month
     var day = today.getDate().toString()
     if(day.length === 1) day = '0' + day
-    var oneWeek = moment(year+'-'+month+'-'+day).add(8, 'days').format('YYYY-MM-DD')
+    var oneWeek = moment(year+'-'+month+'-'+day).add(15, 'days').format('YYYY-MM-DD')
 
     var venueHash = {};
     shows.forEach(function(show){
