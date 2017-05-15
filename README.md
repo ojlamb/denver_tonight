@@ -1,4 +1,4 @@
-# oakland-tonight
+# denver-tonight
 A nightly event aggregator for Oakland, CA
 
 ##install
