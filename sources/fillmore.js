@@ -17,9 +17,9 @@ module.exports = function(done) {
         var show = {
           venue: 'The Fillmore Auditorium',
           venueURL: 'http://www.fillmoreauditorium.org/',
-          date: $(this).find('.eventDay').attr('.eventDay')+$(this).find('.eventDay').attr('.eventMonth'),
+          date: $(this).find('.eventInfo .eventDay').text() + $(this).find('.eventInfo .eventMonth').text(),
           time: '8:00',
-          url: $(this).find('h3').attr('href')
+          url: $(this).find('h3 a').attr('href')
         }
         show.title = $(this).find('h3 a').text();
         shows.push(show)
