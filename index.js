@@ -16,7 +16,6 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
   q.awaitAll(function(errs, results){
     var shows = []
     results.forEach(function(venue){
-	  console.log(venue);
       shows = shows.concat(venue)
     })
 
