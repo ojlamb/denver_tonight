@@ -768,3 +768,7 @@
 [Sat May 20 2017 10:18:13 GMT-0600 (MDT)] [info] fetching sources
 [Sat May 20 2017 10:18:15 GMT-0600 (MDT)] [info] found 181 total shows
 [Sat May 20 2017 10:18:15 GMT-0600 (MDT)] [info] wrote page
+[Sat May 20 2017 10:18:18 GMT-0600 (MDT)] [info] pushed to github
+[Sat May 20 2017 10:25:02 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:25:03 GMT-0600 (MDT)] [info] found 181 total shows
+[Sat May 20 2017 10:25:03 GMT-0600 (MDT)] [info] wrote page
