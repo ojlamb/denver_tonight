@@ -79,11 +79,13 @@ hr {
 }
 
 #tonight {
-  padding-left: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #soon {
-  padding-left: 20px;
+	padding-left: 15px;
+    padding-right: 15px;
 }
 
 #logo {
