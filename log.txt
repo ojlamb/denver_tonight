@@ -776,3 +776,14 @@
 [Sat May 20 2017 10:30:01 GMT-0600 (MDT)] [info] fetching sources
 [Sat May 20 2017 10:30:03 GMT-0600 (MDT)] [info] found 181 total shows
 [Sat May 20 2017 10:30:03 GMT-0600 (MDT)] [info] wrote page
+[Sat May 20 2017 10:30:06 GMT-0600 (MDT)] [info] pushed to github
+[Sat May 20 2017 10:40:21 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:41:13 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:43:04 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:43:47 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:44:44 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:45:58 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:47:43 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:48:30 GMT-0600 (MDT)] [info] fetching sources
+[Sat May 20 2017 10:48:33 GMT-0600 (MDT)] [info] found 201 total shows
+[Sat May 20 2017 10:48:33 GMT-0600 (MDT)] [info] wrote page
