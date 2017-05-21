@@ -33,16 +33,13 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     var day = today.getDate().toString()
     if(day.length === 1) day = '0' + day
     var oneWeek = moment(year+'-'+month+'-'+day).add(8, 'days').format('YYYY-MM-DD')
-	console.log(oneWeek)
-	console.log(year, month, day)
     var venueHash = {};
     shows.forEach(function(show){
-		console.log(show, show.date);
 	  if(!venueHash[show.venue]) venueHash[show.venue] = {venue: show.venue, venueURL: show.venueURL, tonight: [], soon: []}
       if(show.date === year+'-'+month+'-'+day)
         venueHash[show.venue].tonight.push(show)
       else if(show.date > year+'-'+month+'-'+day && show.date <= oneWeek)
-        console.log("PUSH SHOW",show),venueHash[show.venue].soon.push(show)
+        venueHash[show.venue].soon.push(show)
     })
     venues = Object.keys(venueHash).map(function(key){
       return venueHash[key]
@@ -56,11 +53,11 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     html += '<div id="tonight">'
 
     venues.forEach(function(venue){
-      if(venue.tonight.length > 0) html += '<h3><a class="venue-link" href="'+venue.venueURL+'">'+venue.venue+'</a></h3>'
+      if(venue.tonight.length > 0) html += '<h3><a class="venue-link" target="_blank" href="'+venue.venueURL+'">'+venue.venue+'</a></h3>'
       venue.tonight.forEach(function(show, i){
         if(i > 0) html += '<hr>'
         html += '<div class="show">'
-        html += '<h4><a class="show-link" href="'+show.url+'">'+show.title+'</a></h4>'
+        html += '<h4><a target="_blank" class="show-link" href="'+show.url+'">'+show.title+'</a></h4>'
         html += '<div class="info">'+show.time+'</div>'
         if(show.price) html += '<div class="info">'+show.price+'</div>'
         html += '</div>'
