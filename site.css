@@ -21,8 +21,9 @@ body {
 }
 
 h3{
-  color: #BF0A30;
+  color: white;
   text-decoration:none;
+  background-color: #BF0A30;
   padding-top: 10px;
   padding-bottom: 7px;
   padding-left: 10px;
@@ -106,7 +107,7 @@ hr {
 
 .navhead {
   font: 40px "", Helvetica, Arial, sans-serif;
-  background-color: #002868;
+  background-color:#0028683;
   color: white;
   padding: 10px;
   height: 38px;
