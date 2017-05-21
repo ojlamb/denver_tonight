@@ -72,10 +72,18 @@ hr {
   margin-right: 10px;
 }
 
-#about {
+#nav-links {
   text-decoration:none;
   float: right;
   margin-top: -55px;
+  display: inline-block;
+  list-style: none;
+}
+
+#nav-links li {
+	margin: 5px;
+    display: inline;
+    float: left;
 }
 
 #tonight {
