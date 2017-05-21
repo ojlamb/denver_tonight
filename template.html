@@ -2,7 +2,32 @@
 <html>
 <head>
   <title>denver tonight</title>
-  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us15.list-manage.com","uuid":"ca2522eba97bd7e1ac594742f","lid":"de19877d1e"}) })</script>
+  <script>
+    // Fill in your MailChimp popup settings below.
+    // These can be found in the original popup script from MailChimp.
+    var mailchimpConfig = {
+        baseUrl: 'mc.us15.list-manage.com',
+        uuid: 'ca2522eba97bd7e1ac594742f',
+        lid: 'de19877d1e'
+    };
+
+    // No edits below this line are required
+    var chimpPopupLoader = document.createElement("script");
+    chimpPopupLoader.src = '//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js';
+    chimpPopupLoader.setAttribute('data-dojo-config', 'usePlainJson: true, isDebug: false');
+
+    var chimpPopup = document.createElement("script");
+    chimpPopup.appendChild(document.createTextNode('require(["mojo/signup-forms/Loader"], function (L) { L.start({"baseUrl": "' +  mailchimpConfig.baseUrl + '", "uuid": "' + mailchimpConfig.uuid + '", "lid": "' + mailchimpConfig.lid + '"})});'));
+
+    jQuery(function ($) {
+        document.body.appendChild(chimpPopupLoader);
+
+        $(window).load(function () {
+            document.body.appendChild(chimpPopup);
+        });
+
+    });
+</script>
   <link rel="stylesheet" href="site.css">
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 <script>
