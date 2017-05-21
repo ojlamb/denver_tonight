@@ -6,7 +6,6 @@ var moment = require('moment')
 var page = fs.readFileSync(__dirname+'/template.html', 'utf8')
 
 log('info', 'fetching sources')
-
 fs.readdir(__dirname+'/sources', function(err, dirs){
   var q = queue(10)
   dirs.forEach(function(dir){
