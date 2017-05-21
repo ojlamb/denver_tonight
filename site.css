@@ -21,13 +21,14 @@ body {
 }
 
 h3{
-  color: #BF0A30;
+  color: #000;
   text-decoration:none;
   background-color: #FFF;
   padding-top: 10px;
   padding-bottom: 7px;
   padding-left: 10px;
   padding-right: 10px;
+  border-bottom: 1px solid #BF0A30;
 }
 
 .show-link {
@@ -41,7 +42,7 @@ h4{
 }
 
 .venue-link {
-  color: #BF0A30;
+  color: #000;
   text-decoration: none;
 }
 
