@@ -24,6 +24,14 @@ body {
   }
 }
 
+.nav {
+	text-align: center;
+	position: absolute;
+	top: 5;
+	float: right;
+	height: 20px;
+}
+
 
 #hero-image{
   position: relative;
@@ -39,6 +47,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
 }
 
 
