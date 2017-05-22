@@ -154,7 +154,7 @@ hr {
   background-color:#01C4FF;
   color: white;
   padding: 10px;
-  height: 38px;
+  height: min;
   margin-top: 10px;
 }
 
@@ -194,5 +194,5 @@ hr {
 }
 
 .about{
-	margin-top: 50px; 
+	margin-top: 50px;
 }
