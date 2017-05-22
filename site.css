@@ -163,7 +163,7 @@ hr {
   padding-bottom: 3px;
 }
 
-a { color: white; text-decoration: none; }
+.bounce-link { color: white; text-decoration: none; }
 
 .arrow {
   position: absolute;
