@@ -56,7 +56,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
       venue.tonight.forEach(function(show, i){
         if(i > 0) html += '<hr>'
         html += '<div class="show">'
-        html += '<h4><a target="_blank" class="show-link" href="'+show.url+'">'+show.title+'</a></h4>'
+        html += '<h4><a class="show-link" href="'+show.url+'" target="_blank">'+show.title+'</a></h4>'
         html += '<div class="info">'+show.time+'</div>'
         if(show.price) html += '<div class="info">'+show.price+'</div>'
         html += '</div>'
