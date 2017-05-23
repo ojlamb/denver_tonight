@@ -34,7 +34,7 @@ module.exports = function(done) {
 			var month = date[0];
 			var monthNum = { 'January': '01', 'February': '02', 'March': '03', 'April': '04', 'May': '05', 'June': '06','July': '07', 'August': '08', 'September': '09', 'October': '10', 'November': '11', 'December': '12' }
 			var year = date[2];
-			var time = $(this).find('.post_content_wrapper .post_dates .post_time .date_time .h1').text();
+			var time = $(this).find('.post_content_wrapper .post_dates .post_time .date_time h1').text();
 			console.log(time);
 			if(day.length === 1) day = '0'+day;
 			var show = {
