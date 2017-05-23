@@ -2,7 +2,7 @@ var request = require('request')
 var moment = require('moment')
 var cheerio = require('cheerio')
 
-var url = 'http://www.bluebirdtheater.net/events'
+var url = 'http://redrocksonline.com/concerts-events/listing'
 var shows = []
 
 module.exports = function(done) {
@@ -13,7 +13,8 @@ module.exports = function(done) {
       }
     }, function(err, response, body) {
       var $ = cheerio.load(body)
-      $('.redrocks ').each(function(){
+      $('.redrocks').each(function(){
+
 		  console.log( $(this).find('.post_content_wrapper .post_title').text());
 		// var date = $(this).find('.date').text().split(',')[1].split(' ');
 		// var day = date[2];
