@@ -14,8 +14,7 @@ module.exports = function(done) {
     }, function(err, response, body) {
       var $ = cheerio.load(body)
       $('.redrocks').each(function(){
-		  console.log($(this).find('.post_content_wrapper .post_title').text());
-		// var date = $(this).find('.post_content_wrapper .post_title').text();
+		  $(this).find('.post_image a').attr('href');
 		// var day = date[2];
 		// var month = date[1];
 		// var monthNum = { 'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06','Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12' }
