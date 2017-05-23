@@ -105,6 +105,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
 	})
 
 	emailTemplate = emailTemplate.split('{{content}}').join(mjml);
+	console.log(emailTemplate);
 	fs.writeFileSync(__dirname+'/email.html', page);
 
 
