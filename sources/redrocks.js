@@ -29,7 +29,7 @@ module.exports = function(done) {
       $('.redrocks').each(function(){
 		var date = $(this).find('.post_content_wrapper .post_dates .post_day .date_time h1 p').remove().text().split(' ');
 		var date = $(this).find('.post_content_wrapper .post_dates .post_day .date_time h1').text().split(' ');
-		if (date.length < 1){
+		if (date.length > 1){
 			var day = date[1].replace(',','');
 			var month = date[0];
 			var monthNum = { 'January': '01', 'February': '02', 'March': '03', 'April': '04', 'May': '05', 'June': '06','July': '07', 'August': '08', 'September': '09', 'October': '10', 'November': '11', 'December': '12' }
@@ -44,6 +44,7 @@ module.exports = function(done) {
 			  url: $(this).find('.post_image a').attr('href')
 			}
 			show.title = $(this).find('.post_content_wrapper .post_title').text();
+			 console.log(show);
 			shows.push(show)
 		}
       })
