@@ -1060,3 +1060,34 @@
 [Mon May 22 2017 22:14:40 GMT-0600 (MDT)] [info] fetching sources
 [Mon May 22 2017 22:14:42 GMT-0600 (MDT)] [info] found 105 total shows
 [Mon May 22 2017 22:14:42 GMT-0600 (MDT)] [info] wrote page
+[Mon May 22 2017 22:14:45 GMT-0600 (MDT)] [info] pushed to github
+[Mon May 22 2017 22:22:43 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:22:55 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:26:49 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:27:18 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:28:21 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:28:39 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:30:03 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:33:02 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:34:24 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:34:59 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:36:12 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:36:30 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:36:58 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:37:21 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:38:37 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:39:09 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:40:17 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:40:59 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:41:52 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:44:11 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:44:33 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:46:09 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:47:34 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:48:25 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:48:52 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:49:20 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:50:05 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:50:34 GMT-0600 (MDT)] [info] fetching sources
+[Mon May 22 2017 22:50:37 GMT-0600 (MDT)] [info] found 105 total shows
+[Mon May 22 2017 22:50:37 GMT-0600 (MDT)] [info] wrote page
