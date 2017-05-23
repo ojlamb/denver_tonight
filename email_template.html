@@ -1,0 +1,57 @@
+<mjml>
+
+  <mj-head>
+    <mj-title>Weekly Show Schedule</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,500" />
+
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, sans-serif" />
+      <mj-text font-weight="300" font-size="16" color="#000" line-height="24px" />
+      <mj-section padding="0" />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body>
+    <mj-container>
+
+      <mj-section padding="20px 0">
+        <mj-column width="100%">
+          <mj-text font-size="10px">Your weekly intake of the Denver Music Scene is here!</mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image href="https://recast.ai?ref=newsletter" src="https://cdn.recast.ai/newsletter/city-01.png" />
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column width="100%">
+          <mj-text align="center">
+            Your weekly intake of the Denver Music Scene is here!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column width="100%">
+          <mj-text align="center" font-weight="500" padding="0" font-size="26px">
+            Denver Tonight  {{Date}}
+          </mj-text>
+          <mj-divider border-color="#01C4FF" />
+          <mj-text>
+            Welcome to Denver Tonight! the weekly show schedule delivered directly to you. Finding fun shows to go to just got a lot easier. I will send you an email every Monday morning to give you a head start on making your weekend plans.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="30px">
+        <mj-column width="100%">
+          <mj-text font-weight="bold" font-size="20">
+            Next Up
+          </mj-text>
+          <mj-divider border-color="#D0057A"></mj-divider>
+        </mj-column>
+		{{content}}
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>

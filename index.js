@@ -3,7 +3,8 @@ var queue = require('queue-async')
 var childProcess = require('child_process')
 var moment = require('moment')
 
-var page = fs.readFileSync(__dirname+'/template.html', 'utf8')
+var page = fs.readFileSync(__dirname+'/template.html', 'utf8');
+var emailTemplate = fs.readFileSync(__dirname+'/email_template.html', 'utf8');
 
 log('info', 'fetching sources')
 fs.readdir(__dirname+'/sources', function(err, dirs){
@@ -33,8 +34,10 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     if(day.length === 1) day = '0' + day
     var oneWeek = moment(year+'-'+month+'-'+day).add(8, 'days').format('YYYY-MM-DD')
     var venueHash = {};
+
     shows.forEach(function(show){
-	  if(!venueHash[show.venue]) venueHash[show.venue] = {venue: show.venue, venueURL: show.venueURL, tonight: [], soon: []}
+	  if(!venueHash[show.venue]) venueHash[show.venue] = {venue: show.venue, venueURL: show.venueURL, tonight: [], soon: [], all:[]}
+	  venueHash[show.venue].all.push(show)
       if(show.date === year+'-'+month+'-'+day)
         venueHash[show.venue].tonight.push(show)
       else if(show.date > year+'-'+month+'-'+day && show.date <= oneWeek)
@@ -48,9 +51,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     html += '<div class="navhead">TONIGHT'
     html += '<span class="date">' + moment().format('M/D') +'</span>'
     html += '</div>'
-
     html += '<div id="tonight">'
-
     venues.forEach(function(venue){
       if(venue.tonight.length > 0) html += '<h3><a class="venue-link" target="_blank" href="'+venue.venueURL+'">'+venue.venue+'</a></h3>'
       venue.tonight.forEach(function(show, i){
@@ -62,13 +63,10 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
         html += '</div>'
       })
     })
-
     html += '</div>'
-
     html += '<div class="navhead">NEXT WEEK'
     html += '<span class="date">' + moment().add(1, 'day').format('M/D') + '-' + moment().add(8, 'days').format('M/D') + '</span>'
     html += '</div>'
-
     html += '<div id="soon">'
 
     venues.forEach(function(venue){
@@ -83,13 +81,33 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
         html += '</div>'
       })
     })
-
     html += '</div>'
-
     page = page.split('{{content}}').join(html);
-	//TODO I could run this on a weekly bases, and send as an email
+    fs.writeFileSync(__dirname+'/index.html', page);
 
-    fs.writeFileSync(__dirname+'/index.html', page)
+	log('info', 'write mjml');
+	var mjml = '';
+	mjml += '<mj-column width="90%">'
+	venues.forEach(function(venue){
+		if(venue.all.length > 0) {
+			mjml += '<mj-text font-weight="bold"><a target="_blank" href="'+venue.venueURL+'">'+venue.venue+'</a></mj-text>'
+			mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
+		    mjml += '</mj-column>'
+		}
+	  venue.all.forEach(function(show, i){
+		if(i > 0) mjml += '<mj-divider border-width="1px" border-color="#000" />'
+		mjml += '<mj-column width="88%">'
+		mjml += '<mj-text padding-bottom="0px"><a class="show-link" href="'+show.url+'" target="_blank">'+show.title+'</a></mj-text>'
+		mjml += '<mj-text padding-bottom="0px" padding-top="0px">'+show.date.split('-')[1]+'/'+show.date.split('-')[2]+'/'+show.date.split('-')[0]+'</mj-text>'
+		mjml += '<mj-text padding-top="0px">'+show.time+'</mj-text>'
+		mjml += '</mj-column>'
+	  })
+	})
+
+	emailTemplate = emailTemplate.split('{{content}}').join(mjml);
+	fs.writeFileSync(__dirname+'/email.html', page);
+
+
 
     log('info', 'wrote page')
 
