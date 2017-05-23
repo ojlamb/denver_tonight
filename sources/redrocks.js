@@ -35,6 +35,7 @@ module.exports = function(done) {
 			var monthNum = { 'January': '01', 'February': '02', 'March': '03', 'April': '04', 'May': '05', 'June': '06','July': '07', 'August': '08', 'September': '09', 'October': '10', 'November': '11', 'December': '12' }
 			var year = date[2];
 			var time = $(this).find('.post_content_wrapper .post_dates .post_time .date_time .h1').text();
+			console.log(time);
 			if(day.length === 1) day = '0'+day;
 			var show = {
 			  venue: 'Red Rocks',
@@ -44,7 +45,6 @@ module.exports = function(done) {
 			  url: $(this).find('.post_image a').attr('href')
 			}
 			show.title = $(this).find('.post_content_wrapper .post_title').text();
-			 console.log(show);
 			shows.push(show)
 		}
       })
