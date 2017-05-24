@@ -99,14 +99,14 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         mjml += '<mj-column width="90%">'
         venues.forEach(function(venue) {
             if (venue.all.length > 0) {
-                mjml += '<mj-text font-weight="bold"><mj-link target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</mj-link></mj-text>'
+                mjml += '<mj-link color="#000" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</mj-link>'
                 mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
                 mjml += '</mj-column>'
             }
             venue.all.forEach(function(show, i) {
                 if (i > 0) mjml += '<mj-divider border-width="1px" border-color="#000" width="88%"/>'
                 mjml += '<mj-column width="88%">'
-                mjml += '<mj-text padding-bottom="0px"><mj-link class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</mj-link></mj-text>'
+                mjml += '<mj-link padding-bottom="0px" color="#000" href="' + show.url + '" target="_blank">' + show.title + '</mj-link>'
                 mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
                 mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
                 mjml += '</mj-column>'
