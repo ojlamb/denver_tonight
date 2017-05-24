@@ -109,11 +109,11 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 mjml += '<mj-link  font-size="20px" padding-bottom="0px" color="#000" target="_blank">' + show.title + '</mj-link>'
                 mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
                 mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
-				mjml += '<mj-button href="' + show.url + '" background-color="white" color="#D0057A" border="solid" padding="2px" padding-bottom="5px" inner-padding="5px 20px">tickets</mj-button>'
+				mjml += '<mj-button href="' + show.url + '" background-color="white" color="#D0057A" border="solid" padding="2px" padding-bottom="5px" inner-padding="5px 3px">tickets</mj-button>'
                 mjml += '</mj-column>'
             })
         })
-
+		mjml += '</mj-column>'
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
         email = mjml(emailTemplate);
