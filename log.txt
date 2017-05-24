@@ -1373,3 +1373,8 @@
 [Wed May 24 2017 00:12:36 GMT-0600 (MDT)] [info] found 135 total shows
 [Wed May 24 2017 00:12:36 GMT-0600 (MDT)] [info] write mjml
 [Wed May 24 2017 00:12:37 GMT-0600 (MDT)] [info] wrote page
+[Wed May 24 2017 00:12:43 GMT-0600 (MDT)] [info] pushed to github
+[Wed May 24 2017 00:16:42 GMT-0600 (MDT)] [info] fetching sources
+[Wed May 24 2017 00:16:48 GMT-0600 (MDT)] [info] found 135 total shows
+[Wed May 24 2017 00:16:48 GMT-0600 (MDT)] [info] write mjml
+[Wed May 24 2017 00:16:49 GMT-0600 (MDT)] [info] wrote page
