@@ -99,7 +99,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         mjml += '<mj-column width="90%">'
         venues.forEach(function(venue) {
             if (venue.all.length > 0) {
-                mjml += '<mj-link font-weight="bold" color="#000" target="_blank" href="'> + venue.venueURL + '">' + venue.venue + '</mj-link>'
+                mjml += '<mj-link color="#000" target="_blank" href="'> + venue.venueURL + '">' + venue.venue + '</mj-link>'
                 mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
                 mjml += '</mj-column>'
             }
