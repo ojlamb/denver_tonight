@@ -106,9 +106,10 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
             venue.all.forEach(function(show, i) {
                 if (i > 0) mjml += '<mj-divider border-width="1px" border-color="#000" width="88%"/>'
                 mjml += '<mj-column width="88%">'
-                mjml += '<mj-link  font-size="20px" padding-bottom="0px" color="#000" href="' + show.url + '" target="_blank">' + show.title + '</mj-link>'
+                mjml += '<mj-link  font-size="20px" padding-bottom="0px" color="#000" target="_blank">' + show.title + '</mj-link>'
                 mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
                 mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+				mjml += '<mj-button href="' + show.url + '" background-color="white" color="#01C4FF" border="solid" padding="2px">tickets</mj-button>'
                 mjml += '</mj-column>'
             })
         })
