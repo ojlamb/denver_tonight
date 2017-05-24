@@ -1,7 +1,7 @@
-var fs = require('fs')
-var queue = require('queue-async')
-var childProcess = require('child_process')
-var moment = require('moment')
+var fs = require('fs');
+var queue = require('queue-async');
+var childProcess = require('child_process');
+var moment = require('moment');
 
 var page = fs.readFileSync(__dirname+'/template.html', 'utf8');
 var emailTemplate = fs.readFileSync(__dirname+'/email_template.html', 'utf8');
@@ -32,7 +32,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
     if(month.length === 1) month = '0' + month
     var day = today.getDate().toString()
     if(day.length === 1) day = '0' + day
-    var oneWeek = moment(year+'-'+month+'-'+day).add(8, 'days').format('YYYY-MM-DD')
+    var oneWeek = moment(year+'-'+month+'-'+day).add(8, 'days').format('YYYY-MM-DD');
     var venueHash = {};
 
     shows.forEach(function(show){
@@ -105,7 +105,10 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
 	})
 
 	emailTemplate = emailTemplate.split('{{content}}').join(mjml);
-	fs.writeFileSync(__dirname+'/email.html', emailTemplate);
+	var mjml = require('mjml').mjml2html;
+	emailHtml = mjml(emailTemplate);
+	fs.writeFileSync(__dirname+'/email.html', emailHtml);
+
 
 
 
