@@ -22,7 +22,7 @@ module.exports = function(done) {
 		var time = $(this).find('.time').text();
 		if(day.length === 1) day = '0'+day;
         var show = {
-          venue: 'Fiddlers Green Ampitheatre',
+          venue: '1st Bank Center',
           venueURL: 'http://www.1stbankcenter.com',
           date: year + "-" + monthNum[month] + "-" + day,
           time: time,
