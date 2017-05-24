@@ -1,231 +1,1053 @@
-<!DOCTYPE html>
-<html>
+<mjml>
 
-<head>
-	<title>denver tonight</title>
-	<link rel="stylesheet" href="site.css">
-	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script>
-		(function(i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function() {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  <mj-head>
+    <mj-title>Weekly Show Schedule</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,500" />
 
-		ga('create', 'UA-46038987-3', 'auto');
-		ga('send', 'pageview');
-	</script>
-</head>
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, sans-serif" />
+      <mj-text font-weight="300" font-size="16" color="#000" line-height="24px" />
+      <mj-section padding="0" />
+    </mj-attributes>
+  </mj-head>
 
-<body>
-	<div class="nav">
-		<ul id="nav-links">
-			<li><a id='about' href='about.html'>about</a></li>
-		</ul>
-	</div>
-	<div id="hero-image">
-		<!-- Begin MailChimp Signup Form -->
-		<div class="hero-text">
-			<h1>Denver Tonight</h1>
-			<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-			<style type="text/css">
-				#mc_embed_signup {
-					background: transparent;
-					clear: left;
-					font: 14px Helvetica, Arial, sans-serif;
-					width: 100%;
-				}
-				/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-			We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-			</style>
-			<div id="mc_embed_signup">
-				<form action="//ojlamb.us15.list-manage.com/subscribe/post?u=ca2522eba97bd7e1ac594742f&amp;id=de19877d1e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<div id="mc_embed_signup_scroll">
-						<label for="mce-EMAIL">Subscribe to our mailing list</label>
-						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ca2522eba97bd7e1ac594742f_de19877d1e" tabindex="-1" value=""></div>
-						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-					</div>
-				</form>
-			</div>
-		</div>
-		<div class="arrow bounce">
-		   <a class="bounce-link" href="#tonight"><img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyDQoJbDE4OS45OTktMTkwYzIwLjE3OC0yMC4xNzgsNTMuMTY0LTE5LjkxMyw3My42NzIsMC41OTVsMCwwYzIwLjUwOCwyMC41MDksMjAuNzcyLDUzLjQ5MiwwLjU5NSw3My42NzFMMjkzLjc1MSw0NTUuODY4eiIvPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyMC4yNDksNDU1Ljg2OGMyMC4xOCwyMC4xNzksNTMuMTY0LDE5LjkxMyw3My42NzItMC41OTVsMCwwYzIwLjUwOS0yMC41MDgsMjAuNzc0LTUzLjQ5MywwLjU5Ni03My42NzINCglsLTE5MC0xOTBjLTIwLjE3OC0yMC4xNzgtNTMuMTY0LTE5LjkxMy03My42NzEsMC41OTVsMCwwYy0yMC41MDgsMjAuNTA5LTIwLjc3Miw1My40OTItMC41OTUsNzMuNjcxTDIyMC4yNDksNDU1Ljg2OHoiLz4NCjwvc3ZnPg0K" /></a>
-		</div>
-	</div>
-	<div class="main">
-		<div><div class="navhead">TONIGHT<span class="date">5/23</span></div><div id="tonight"><h3><a class="venue-link" target="_blank" href="http://redrocksonline.com">Red Rocks</a></h3><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/chris-staple-5-23-2017" target="_blank">
+  <mj-body>
+    <mj-container>
+
+      <mj-section padding="20px 0">
+        <mj-column width="100%">
+          <mj-text font-size="10px">Your weekly intake of the Denver Music Scene is here!</mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image href="https://recast.ai?ref=newsletter" src="https://cdn.recast.ai/newsletter/city-01.png" />
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column width="100%">
+          <mj-text align="center">
+            Your weekly intake of the Denver Music Scene is here!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column width="100%">
+          <mj-text align="center" font-weight="500" padding="0" font-size="26px">
+            Denver Tonight  {{Date}}
+          </mj-text>
+          <mj-divider border-color="#01C4FF" />
+          <mj-text>
+            Welcome to Denver Tonight! the weekly show schedule delivered directly to you. Finding fun shows to go to just got a lot easier. I will send you an email every Monday morning to give you a head start on making your weekend plans.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="30px">
+        <mj-column width="100%">
+          <mj-text font-weight="bold" font-size="20">
+            Next Up
+          </mj-text>
+          <mj-divider border-color="#D0057A"></mj-divider>
+        </mj-column>
+		<mj-column width="90%"><mj-text font-weight="bold"><a target="_blank" href="http://redrocksonline.com">Red Rocks</a></mj-text><mj-divider border-color="#01C4FF"></mj-divider></mj-column><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/chance-the-r-5-2-2017" target="_blank">
+										
+											Chance the Rapper
+											King Louie, DJ Oreo
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/02/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/chance-the-r-5-3-2017" target="_blank">
+										
+											Chance the Rapper
+											King Louie, DJ Oreo
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/03/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/dada-life-5-5-5-2017" target="_blank">
+										
+											Dada Life
+											Slander, Pegboard Nerds, Kill Paris, BassCrooks.
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/05/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/papadosio-5-5-6-2017" target="_blank">
+										
+											Papadosio
+											Alex & Allyson Grey, Johnathan Singer, SunSquabi, Desert Dwellers, Supersillyus
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/06/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/opeth-gojira" target="_blank">
+										
+											Opeth & Gojira
+											Devin Townsend Project
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/11/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/bonobo-nick-5-12-2017" target="_blank">
+										
+											Bonobo & Nick Murphy (Chet Faker)
+											Marcus Marr, Innov Gnawa
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/12/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/lettuce-5-13-5-13-2017" target="_blank">
+										
+											Lettuce
+											Ghostface Killah, George Porter Jr., John Scofield, Marcus King, Cyril Neville, Turkuaz, The Russ Liquid Test, J Rocc & more TBA
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/13/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/fotr-superba-5-15-2017" target="_blank">
+										
+											FOTR  Superbad
+											The Other Black and Sur Ellz
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/15/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/primus-5-16-5-16-2017" target="_blank">
+										
+											Primus
+											The Claypool Lennon Delirium
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/16/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/global-dub-f-5-20-2017" target="_blank">
+										
+											Global Dub Festival 2017 feat. Flux Pavilion and Illenium
+											
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/20/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/elephant-rev-5-21-2017" target="_blank">
+										
+											Elephant Revival
+											The Oh Hellos and Mandolin Orange
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/21/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/fotr-rogue-o-5-22-2017" target="_blank">
+										
+											POSTPONED - FOTR Rogue One:  A Star Wars Story
+											The Haunted Windchimes and The Milk Blossoms
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/22/2017</mj-text><mj-text padding-top="0px"></mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/chris-staple-5-23-2017" target="_blank">
 										
 											Chris Stapleton's "All American Road Show"
 											Brothers Osborne & Lucie Silvas
 										
-									</a></h4><div class="info">7:00 PM
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/23/2017</mj-text><mj-text padding-top="0px">7:00 PM
 												Visitors Welcome Until: 1:00 PM												Doors 5:30 PM
-												</div></div><h3><a class="venue-link" target="_blank" href="http://www.bluebirdtheater.net/">The Bluebird Theater</a></h3><div class="show"><h4><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/334049" target="_blank">
-				
-
-					Pallbearer				
-			</a></h4><div class="info">
-				
-									Show
-					8:00 PM
-				
-			</div></div></div><div class="navhead">NEXT WEEK<span class="date">5/24-5/31</span></div><div id="soon"><h3><a class="venue-link" href="http://redrocksonline.com">Red Rocks</a></h3><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/chris-staple-5-24-2017">
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/chris-staple-5-24-2017" target="_blank">
 										
 											Chris Stapleton's "All American Road Show"
 											Brothers Osborne & Lucie Silvas
 										
-									</a></h4><div class="info">05/24/2017</div><div class="info">7:00 PM
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/24/2017</mj-text><mj-text padding-top="0px">7:00 PM
 												Visitors Welcome Until: 1:00 PM												Doors 5:30 PM
-												</div></div><hr><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/fotr-long-st-5-25-2017">
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/fotr-long-st-5-25-2017" target="_blank">
 										
 											FOTR Long Strange Trip
 											Grateful Dead Tribute Show with Arthur Lee Land Trio & special guests
 										
-									</a></h4><div class="info">05/25/2017</div><div class="info">6:45 PM
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/25/2017</mj-text><mj-text padding-top="0px">6:45 PM
 												Visitors Welcome Until: 4:00 PM												Doors 6:00 PM
-												</div></div><hr><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/jethro-tull-5-26-2017">
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/jethro-tull-5-26-2017" target="_blank">
 										
 											Jethro Tull by Ian Anderson with the Colorado Symphony
 											
 										
-									</a></h4><div class="info">05/26/2017</div><div class="info">8:00 PM
-																								Doors 7:00 PM
-												</div></div><hr><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/odesza-5-27-5-27-2017">
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/26/2017</mj-text><mj-text padding-top="0px">8:00 PM
+												Visitors Welcome Until: 2:00 PM												Doors 7:00 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/odesza-5-27-5-27-2017" target="_blank">
 										
 											ODESZA 
 											Slow Magic, Fakear, Photay 
 										
-									</a></h4><div class="info">05/27/2017</div><div class="info">6:30 PM
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/27/2017</mj-text><mj-text padding-top="0px">6:30 PM
 												Visitors Welcome Until: 12:30 PM												Doors 6:00 PM
-												</div></div><hr><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/odesza-5-28-5-28-2017">
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/odesza-5-28-5-28-2017" target="_blank">
 										
 											ODESZA
 											FKJ, Tennyson,  Pomo 
 										
-									</a></h4><div class="info">05/28/2017</div><div class="info">6:30 PM
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/28/2017</mj-text><mj-text padding-top="0px">6:30 PM
 												Visitors Welcome Until: 12:30 PM												Doors 6:00 PM
-												</div></div><hr><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/tom-petty-th-5-29-2017">
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/tom-petty-th-5-29-2017" target="_blank">
 										
 											Tom Petty & The Heartbreakers
 											Joe Walsh
 										
-									</a></h4><div class="info">05/29/2017</div><div class="info">7:30 PM
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/29/2017</mj-text><mj-text padding-top="0px">7:30 PM
 												Visitors Welcome Until: 2:00 PM												Doors 6:00 PM
-												</div></div><hr><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/tom-petty-th-5-30-2017">
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/tom-petty-th-5-30-2017" target="_blank">
 										
 											Tom Petty & The Heartbreakers
 											Joe Walsh
 										
-									</a></h4><div class="info">05/30/2017</div><div class="info">7:30 PM
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/30/2017</mj-text><mj-text padding-top="0px">7:30 PM
 												Visitors Welcome Until: 2:00 PM												Doors 6:00 PM
-												</div></div><hr><div class="show"><h4><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/trey-anastas-5-31-2017">
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/trey-anastas-5-31-2017" target="_blank">
 										
 											Trey Anastasio Band
 											Vulfpeck
 										
-									</a></h4><div class="info">05/31/2017</div><div class="info">6:00 PM
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/31/2017</mj-text><mj-text padding-top="0px">6:00 PM
 																								Doors 5:30 PM
-												</div></div><h3><a class="venue-link" href="http://www.bluebirdtheater.net/">The Bluebird Theater</a></h3><div class="show"><h4><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/333329">
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/chromeo-rufu-6-1-2017" target="_blank">
+										
+											Chromeo / RÜFÜS DU SOL
+											Claptone, Hayden James
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/01/2017</mj-text><mj-text padding-top="0px">6:30 PM
+																								Doors 5:30 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/the-motet-an-6-2-2017" target="_blank">
+										
+											The Motet and Jurassic 5
+											CALIFORNIA HONEYDROPS
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/02/2017</mj-text><mj-text padding-top="0px">7:00 PM
+																								Doors 6:00 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/the-disco-bi-6-3-2017" target="_blank">
+										
+											Disco Biscuits: with Shpongle (Simon Posford Live)
+											Phutureprimative
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/03/2017</mj-text><mj-text padding-top="0px">6:00 PM
+																								Doors 5:30 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/john-prine-w-6-4-2017" target="_blank">
+										
+											John Prine with Kacey Musgraves
+											
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/04/2017</mj-text><mj-text padding-top="0px">6:30 PM
+																								Doors 5:30 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/fotr-dirty-d-6-5-2017" target="_blank">
+										
+											FOTR Dirty Dancing
+											LOLO and Natalie Tate
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/05/2017</mj-text><mj-text padding-top="0px">7:00 PM
+																								Doors 6:30 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/celtic-woman-6-6-2017" target="_blank">
+										
+											Celtic Woman
+											
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/06/2017</mj-text><mj-text padding-top="0px">7:30 PM
+																								Doors 6:00 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/phoenix-6-7-6-7-2017" target="_blank">
+										
+											Phoenix
+											Miike Snow, The Lemon Twigs
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/07/2017</mj-text><mj-text padding-top="0px">7:00 PM
+																								Doors 6:00 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/brit-floyd-6-6-8-2017" target="_blank">
+										
+											Brit Floyd
+											
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/08/2017</mj-text><mj-text padding-top="0px">8:00 PM
+																								Doors 6:30 PM
+												</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://redrocksonline.com/concerts-events/detail/boombox-nahk-6-9-2017" target="_blank">
+										
+											Boombox & Nahko and Medicine for the People
+											The Hip Abduction
+										
+									</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/09/2017</mj-text><mj-text padding-top="0px">6:30 PM
+																								Doors 6:00 PM
+												</mj-text></mj-column><mj-text font-weight="bold"><a target="_blank" href="http://www.bluebirdtheater.net/">The Bluebird Theater</a></mj-text><mj-divider border-color="#01C4FF"></mj-divider></mj-column><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/334049" target="_blank">
 				
 
-					Vamps				
-			</a></h4><div class="info">05/24/2017</div><div class="info">
+					Pallbearer				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/23/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					8:00 PM
 				
-			</div></div><hr><div class="show"><h4><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/331961">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/333329" target="_blank">
+				
+
+					Vamps				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/24/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:15 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/331961" target="_blank">
 				
 
 					Justin Townes Earle				
-			</a></h4><div class="info">05/26/2017</div><div class="info">
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/26/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					9:00 PM
 				
-			</div></div><hr><div class="show"><h4><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/335500">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/335500" target="_blank">
 				
 
 					Tellerpalooza				
-			</a></h4><div class="info">05/27/2017</div><div class="info">
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/27/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					4:30 PM
 				
-			</div></div><hr><div class="show"><h4><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/331854">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/331854" target="_blank">
 				
 
 					Brandy Clark / Charlie Worsham				
-			</a></h4><div class="info">05/31/2017</div><div class="info">
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/31/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					8:00 PM
 				
-			</div></div><h3><a class="venue-link" href="http://www.gothictheatre.com/">The Gothic Theatre</a></h3><div class="show"><h4><a class="show-link" href="http://www.gothictheatre.com/events/detail/332824">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/335129" target="_blank">
+				
+
+					ZZ Ward				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/03/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/330430" target="_blank">
+				
+
+					Morbid Angel				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/08/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/331058" target="_blank">
+				
+
+					Lewis Del Mar				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/09/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/330553" target="_blank">
+				
+
+					Vader				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/10/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/335192" target="_blank">
+				
+
+					Langhorne Slim & The Law				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/11/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/332179" target="_blank">
+				
+
+					Black Stone Cherry				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/12/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/335081" target="_blank">
+				
+
+					Kasey Chambers				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/13/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/334777" target="_blank">
+				
+
+					DJ Premier and The Badder Band Present				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/14/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/334046" target="_blank">
+				
+
+					Parker Millsap				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/15/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/333986" target="_blank">
+				
+
+					Dion Timmer				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/16/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/330901" target="_blank">
+				
+
+					Portugal. The Man **SOLD OUT**				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/17/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/335751" target="_blank">
+				
+
+					Mason Jennings				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/18/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/330546" target="_blank">
+				
+
+					Hurray for the Riff Raff				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/21/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/334875" target="_blank">
+				
+
+					Goldfish				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/23/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.bluebirdtheater.net/events/detail/334580" target="_blank">
+				
+
+					Freddie Gibbs				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/25/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-text font-weight="bold"><a target="_blank" href="http://www.gothictheatre.com/">The Gothic Theatre</a></mj-text><mj-divider border-color="#01C4FF"></mj-divider></mj-column><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/332824" target="_blank">
 				
 
 					JoJo				
-			</a></h4><div class="info">05/24/2017</div><div class="info">
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/24/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					8:00 PM
 				
-			</div></div><hr><div class="show"><h4><a class="show-link" href="http://www.gothictheatre.com/events/detail/335443">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/335443" target="_blank">
 				
 
 					Malaa				
-			</a></h4><div class="info">05/27/2017</div><div class="info">
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/27/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					10:00 PM
 				
-			</div></div><h3><a class="venue-link" href="http://www.1stbankcenter.com">Fiddlers Green Ampitheatre</a></h3><div class="show"><h4><a class="show-link" href="http://www.1stbankcenter.com/events/detail/330516">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/335633" target="_blank">
 				
 
-					Jean-Michel Jarre: Electronica Tour - First North American Tour Ever				
-			</a></h4><div class="info">05/24/2017</div><div class="info">
+					Tattooed Strings				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/02/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					8:00 PM
 				
-			</div></div><h3><a class="venue-link" href="http://www.ogdentheatre.com/">The Ogden Theatre</a></h3><div class="show"><h4><a class="show-link" href="http://www.ogdentheatre.com/events/detail/331322">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/332153" target="_blank">
 				
 
-					D.R.A.M.				
-			</a></h4><div class="info">05/26/2017</div><div class="info">
+					AMZY				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/03/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/330268" target="_blank">
+				
+
+					Damien Escobar				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/07/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/334339" target="_blank">
+				
+
+					Easy Star All-Stars				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/08/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/334036" target="_blank">
+				
+
+					OK Go				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/09/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/335783" target="_blank">
+				
+
+					COLORS Presents: R&B ONLY				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/10/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/335161" target="_blank">
+				
+
+					Black Lips				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/16/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/336468" target="_blank">
+				
+
+					A Boogie Wit Da Hoodie				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/21/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/334637" target="_blank">
+				
+
+					Poptone				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/22/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/336302" target="_blank">
+				
+
+					Hell's Belles				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/23/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/334175" target="_blank">
+				
+
+					Birch Street				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/30/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/336700" target="_blank">
+				
+
+					Rival Sons				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/07/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					8:30 PM
 				
-			</div></div><hr><div class="show"><h4><a class="show-link" href="http://www.ogdentheatre.com/events/detail/328145">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/335498" target="_blank">
+				
+
+					Michelle Branch				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/14/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/334171" target="_blank">
+				
+
+					Mura Masa				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/26/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/334478" target="_blank">
+				
+
+					The Sword				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/29/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/335374" target="_blank">
+				
+
+					James Vincent McMorrow				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/05/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/334470" target="_blank">
+				
+
+					Petit Biscuit				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/08/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.gothictheatre.com/events/detail/336617" target="_blank">
+				
+
+					ONE OK ROCK				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/09/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-text font-weight="bold"><a target="_blank" href="http://www.1stbankcenter.com">Fiddlers Green Ampitheatre</a></mj-text><mj-divider border-color="#01C4FF"></mj-divider></mj-column><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/330516" target="_blank">
+				
+
+					Jean-Michel Jarre: Electronica Tour - First North American Tour Ever				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/24/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/332310" target="_blank">
+				
+
+					John Mellencamp				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/05/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/333322" target="_blank">
+				
+
+					BOSTON w/ Night Ranger				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/06/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/331324" target="_blank">
+				
+
+					The Moody Blues				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/20/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/332220" target="_blank">
+				
+
+					Kenny Loggins, Peter Cetera, Christopher Cross with The Colorado Symphony				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/24/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/332536" target="_blank">
+				
+
+					I Love The 90s – The Party Continues Tour featuring Blackstreet / Naughty By Nature				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/01/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/330685" target="_blank">
+				
+
+					Train				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/04/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					6:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/335189" target="_blank">
+				
+
+					Bassnectar				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/07/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/335190" target="_blank">
+				
+
+					Bassnectar				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/08/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/335191" target="_blank">
+				
+
+					Bassnectar				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/09/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/332422" target="_blank">
+				
+
+					Jack Johnson				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/13/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/331325" target="_blank">
+				
+
+					Jack Johnson				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/14/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/332736" target="_blank">
+				
+
+					Daryl Hall & John Oates and Tears For Fears				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/15/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/331463" target="_blank">
+				
+
+					Blondie & Garbage				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/16/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/332542" target="_blank">
+				
+
+					Goo Goo Dolls				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/18/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/336561" target="_blank">
+				
+
+					KS 107.5 Summer Jam XX Presented by Mile High Pipe				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/28/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					6:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/332734" target="_blank">
+				
+
+					Jim Gaffigan				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/29/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/332222" target="_blank">
+				
+
+					Slayer				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/02/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/335880" target="_blank">
+				
+
+					Alabama				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/05/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/334468" target="_blank">
+				
+
+					Hans Zimmer Live on Tour				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/06/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/330279" target="_blank">
+				
+
+					Green Day				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/09/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					6:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/334939" target="_blank">
+				
+
+					Channel 93.3 Big Gig 2017: Blink-182				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/12/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					1:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/330457" target="_blank">
+				
+
+					Idina Menzel				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/18/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/335878" target="_blank">
+				
+
+					Outcry Tour Summer 2017				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/19/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/334038" target="_blank">
+				
+
+					Jeff Foxworthy & Larry The Cable Guy				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/19/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					6:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/332541" target="_blank">
+				
+
+					The Lumineers **SOLD OUT**				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/25/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/333026" target="_blank">
+				
+
+					The Lumineers **SOLD OUT**				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/26/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fiddlersgreenamp.com/events/detail/333851" target="_blank">
+				
+
+					The Lumineers				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/27/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					6:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/335661" target="_blank">
+				
+
+					Belong Tour				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">09/22/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					7:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.1stbankcenter.com/events/detail/334493" target="_blank">
+				
+
+					Scorpions				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">09/25/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-text font-weight="bold"><a target="_blank" href="http://www.ogdentheatre.com/">The Ogden Theatre</a></mj-text><mj-divider border-color="#01C4FF"></mj-divider></mj-column><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/331322" target="_blank">
+				
+
+					D.R.A.M.				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/26/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:30 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/328145" target="_blank">
 				
 
 					Vulfpeck **SOLD OUT**				
-			</a></h4><div class="info">05/30/2017</div><div class="info">
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/30/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					9:00 PM
 				
-			</div></div><hr><div class="show"><h4><a class="show-link" href="http://www.ogdentheatre.com/events/detail/330705">
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/330705" target="_blank">
 				
 
 					The Disco Biscuits				
-			</a></h4><div class="info">05/31/2017</div><div class="info">
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">05/31/2017</mj-text><mj-text padding-top="0px">
 				
 									Show
 					9:00 PM
 				
-			</div></div></div></div>
-	</div>
-</body>
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/330706" target="_blank">
+				
 
-</html>
+					The Disco Biscuits				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/01/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/330707" target="_blank">
+				
+
+					The Disco Biscuits				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/02/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/332034" target="_blank">
+				
+
+					Marian Hill				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/03/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/334712" target="_blank">
+				
+
+					Circles Around the Sun				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/08/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/334228" target="_blank">
+				
+
+					Dispatch **SOLD OUT**				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/15/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/335520" target="_blank">
+				
+
+					XXXTENTACION				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/17/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/335618" target="_blank">
+				
+
+					George Clinton & Parliament Funkadelic				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/18/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/332223" target="_blank">
+				
+
+					Streetlight Manifesto				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/23/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/335378" target="_blank">
+				
+
+					Conor Oberst				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/30/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/334251" target="_blank">
+				
+
+					MisterWives				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/01/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/332537" target="_blank">
+				
+
+					Zeds Dead				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/02/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/335377" target="_blank">
+				
+
+					DJ Shadow				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/11/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/333799" target="_blank">
+				
+
+					Caravan Palace				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/12/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/334775" target="_blank">
+				
+
+					Dawes				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/22/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					9:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/334977" target="_blank">
+				
+
+					A Tribe Called Red				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/02/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/334100" target="_blank">
+				
+
+					Blackberry Smoke				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/09/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.ogdentheatre.com/events/detail/332031" target="_blank">
+				
+
+					Sylvan Esso **SOLD OUT**				
+			</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/10/2017</mj-text><mj-text padding-top="0px">
+				
+									Show
+					8:00 PM
+				
+			</mj-text></mj-column><mj-text font-weight="bold"><a target="_blank" href="http://www.fillmoreauditorium.org/">The Fillmore Auditorium</a></mj-text><mj-divider border-color="#01C4FF"></mj-divider></mj-column><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/modest-mouse/" target="_blank">Modest Mouse</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/06/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/at-the-drive-in/" target="_blank">At The Drive In</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/15/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/russ/" target="_blank">Russ</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">06/26/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/ghost-b-c/" target="_blank">Ghost B.C.</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/08/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/all-time-low/" target="_blank">All Time Low</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/14/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/prince-royce/" target="_blank">Prince Royce</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/19/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/dita-von-teese/" target="_blank">Dita Von Teese</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/20/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/the-descendents/" target="_blank">The Descendents</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/22/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/lifehouse-switchfoot/" target="_blank">Lifehouse & Switchfoot</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/23/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/violent-femmes-echo-and-the-bunnymen/" target="_blank">Violent Femmes & Echo and The Bunnymen</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/26/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/chevelle/" target="_blank">Chevelle</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">07/30/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/meek-mill-yo-gotti/" target="_blank">Meek Mill & Yo Gotti</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">08/01/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/future-islands/" target="_blank">Future Islands</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">09/29/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/milky-chance/" target="_blank">Milky Chance</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">10/06/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column><mj-divider border-width="1px" border-color="#000" width="88%"/><mj-column width="88%"><mj-text padding-bottom="0px"><a class="show-link" href="http://www.fillmoreauditorium.org/events/pixies-2/" target="_blank">Pixies</a></mj-text><mj-text padding-bottom="0px" padding-top="0px">10/18/2017</mj-text><mj-text padding-top="0px">8:00 pm</mj-text></mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>

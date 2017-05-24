@@ -95,7 +95,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
 		    mjml += '</mj-column>'
 		}
 	  venue.all.forEach(function(show, i){
-		if(i > 0) mjml += '<mj-divider border-width="1px" border-color="#000" />'
+		if(i > 0) mjml += '<mj-divider border-width="1px" border-color="#000" width="88%"/>'
 		mjml += '<mj-column width="88%">'
 		mjml += '<mj-text padding-bottom="0px"><a class="show-link" href="'+show.url+'" target="_blank">'+show.title+'</a></mj-text>'
 		mjml += '<mj-text padding-bottom="0px" padding-top="0px">'+show.date.split('-')[1]+'/'+show.date.split('-')[2]+'/'+show.date.split('-')[0]+'</mj-text>'
@@ -105,8 +105,7 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
 	})
 
 	emailTemplate = emailTemplate.split('{{content}}').join(mjml);
-	console.log(emailTemplate);
-	fs.writeFileSync(__dirname+'/email.html', page);
+	fs.writeFileSync(__dirname+'/email.html', emailTemplate);
 
 
 
