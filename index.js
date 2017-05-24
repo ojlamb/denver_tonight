@@ -106,8 +106,8 @@ fs.readdir(__dirname+'/sources', function(err, dirs){
 
 	emailTemplate = emailTemplate.split('{{content}}').join(mjml);
 	var mjml = require('mjml').mjml2html;
-	emailHtml = mjml(emailTemplate);
-	fs.writeFileSync(__dirname+'/email.html', emailHtml);
+	email = mjml(emailTemplate);
+	fs.writeFileSync(__dirname+'/email.html', email.html);
 
 
 
