@@ -99,7 +99,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         mjml += '<mj-column width="90%">'
         venues.forEach(function(venue) {
             if (venue.all.length > 0) {
-                mjml += '<mj-link color="#000" target="_blank" href="'> + venue.venueURL + '">' + venue.venue + '</mj-link>'
+                mjml += '<mj-link color="#000" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</mj-link>'
                 mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
                 mjml += '</mj-column>'
             }
@@ -115,9 +115,8 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
-		console.log(emailTemplate);
         email = mjml(emailTemplate);
-		fs.writeFileSync(__dirname + '/email.html', email.html);
+        fs.writeFileSync(__dirname + '/email.html', email.html);
 
 
 
