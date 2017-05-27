@@ -73,7 +73,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
             })
         })
         html += '</div>'
-        html += '<div class="navhead">NEXT WEEK'
+        html += '<div class="navhead">NEXT UP'
         html += '<span class="date">' + moment().add(1, 'day').format('M/D') + '-' + moment().add(8, 'days').format('M/D') + '</span>'
         html += '</div>'
         html += '<div id="soon">'
