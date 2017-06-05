@@ -97,10 +97,8 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         log('info', 'write mjml');
         var mjml = '';
         mjml += '<mj-column width="90%">'
-		mjml += '<mj-accordion>'
         venues.forEach(function(venue) {
             if (venue.all.length > 0) {
-				mjml += '<mj-accordion-element>'
                 mjml += '<mj-link align="left" font-size="24px" font-weight="bold" padding-top="12px" padding-bottom="4px" color="#000" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</mj-link>'
                 mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
             }
@@ -112,13 +110,9 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
 				mjml += '<mj-button href="' + show.url + '" background-color="white" color="#D0057A" border="solid" padding="2px" padding-bottom="5px" inner-padding="5px 30px">tickets</mj-button>'
                 mjml += '</mj-column>'
-				mjml += '</mj-accordion-element>'
-            });
-
+            })
         })
-		mjml += '</mj-accordion>'
 		mjml += '</mj-column>'
-		console.log(mjml);
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
         email = mjml(emailTemplate);
