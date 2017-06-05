@@ -25,7 +25,7 @@ module.exports = function(done) {
           venueURL: 'http://cityparkjazz.org',
           date: year + "-" + month + "-" + day,
           time: time,
-          url: $(this).find('.eventlist-title-link').attr('href')
+          url: 'http://cityparkjazz.org/' + $(this).find('.eventlist-title-link').attr('href')
         }
         show.title = $(this).find('h1 .eventlist-title').text();
         shows.push(show)
