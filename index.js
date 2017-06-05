@@ -119,6 +119,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		mjml += '</mj-column>'
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
+		console.log(emailTemplate)
         email = mjml(emailTemplate);
         fs.writeFileSync(__dirname + '/email.html', email.html);
 
