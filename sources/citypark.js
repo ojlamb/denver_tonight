@@ -17,14 +17,13 @@ module.exports = function(done) {
 		var date = $(this).find('.event-date').attr('datetime').split('-')
 		var day = date[2];
 		var month = date[1];
-		var monthNum = { 'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06','Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12' }
 		var year = (new Date()).getFullYear()
-		var time = $(this).find('.time').text();
+		var time = $(this).find('.eventlist-meta-time .event-time-12hr-start').text();
 		if(day.length === 1) day = '0'+day;
         var show = {
           venue: 'City Park Jazz',
           venueURL: 'http://cityparkjazz.org',
-          date: year + "-" + monthNum[month] + "-" + day,
+          date: year + "-" + month + "-" + day,
           time: time,
           url: $(this).find('h1 .eventlist-title').attr('href')
         }
