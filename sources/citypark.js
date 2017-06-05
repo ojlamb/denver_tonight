@@ -30,6 +30,7 @@ module.exports = function(done) {
         }
         show.title = $(this).find('h1 .eventlist-title').text();
         shows.push(show)
+		console.log(show);
       })
 
       done(null, shows)
