@@ -29,7 +29,6 @@ module.exports = function(done) {
         }
         show.title = $(this).find('.eventlist-title-link').text();
         shows.push(show)
-		console.log(show);
       })
 
       done(null, shows)
