@@ -103,6 +103,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
             }
             venue.all.forEach(function(show, i) {
+				console.log("venue")
                 if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
                 mjml += '<mj-column width="88%">'
                 mjml += '<mj-link  font-size="20px" padding-top="5px" padding-bottom="0px" color="#000" target="_blank">' + show.title + '</mj-link>'
