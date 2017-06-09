@@ -111,7 +111,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 mjml += '<mj-text font-size="20px" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
                 mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
                 mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
-				mjml += '<mj-text><a href="' + show.url + '">'+buttonText+'</a></mj-text>'
+				mjml += '<mj-text align="center" font-size="18"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
             })
         })
 		mjml += '</mj-column>'
