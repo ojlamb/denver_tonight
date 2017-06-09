@@ -99,7 +99,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         mjml += '<mj-column width="90%">'
         venues.forEach(function(venue) {
             if (venue.all.length > 0) {
-                mjml += '<mj-raw><a font-size="22px" align="left" color="#000" href="' + venue.venueURL + '">' + venue.venue + '</a></mj-raw>'
+                mjml += '<mj-button font-size="22px" align="left" background-color="white" color="#000" href="' + venue.venueURL + '">' + venue.venue + '</mj-button>'
                 mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
             }
             venue.all.forEach(function(show, i) {
@@ -111,7 +111,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 mjml += '<mj-text font-size="20px" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
                 mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
                 mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
-				mjml += '<mj-button href="' + show.url + '" background-color="white" color="#D0057A" border="solid" padding="2px" padding-bottom="5px" inner-padding="5px 30px"><mj-raw><span>'+buttonText+'</span></mj-raw></mj-button>'
+				mjml += '<mj-button href="' + show.url + '" background-color="white" color="#D0057A" border="solid" padding="2px" padding-bottom="5px" inner-padding="5px 30px">'+buttonText+'</mj-button>'
             })
         })
 		mjml += '</mj-column>'
