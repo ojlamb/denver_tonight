@@ -38,7 +38,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		console.log(shows);
 		var i = 0;
         shows.forEach(function(show) {
-			console.log(i)
             if (!venueHash[show.venue]) venueHash[show.venue] = {
                 venue: show.venue,
                 venueURL: show.venueURL,
@@ -53,7 +52,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				venueHash[show.venue].soon.push(show)
 				venueHash[show.venue].all.push(show)
 			}
-			i += 1;
         })
         venues = Object.keys(venueHash).map(function(key) {
             return venueHash[key]
@@ -111,7 +109,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 					buttonText = 'Info'
 				}
                 if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
-                mjml += '<mj-text font-size="20px" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+                mjml += '<mj-text font-size="20px" font-weight="700" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
                 mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
                 mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
 				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
