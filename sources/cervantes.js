@@ -31,6 +31,7 @@ module.exports = function(done) {
 	          url: 'http://www.cervantesmasterpiece.com' + $(this).find('div a').attr('href')
 	        }
         show.title = $(this).find('div a').text();
+		if(!show.title){ return; }
         shows.push(show)
 		console.log(show);
       })
