@@ -14,7 +14,7 @@ module.exports = function(done) {
     }, function(err, response, body) {
       var $ = cheerio.load(body)
       $('.vevent').each(function(){
-		  console.log($(this).find('.date'));
+		  console.log($(this).find('.date .value-title').attr('title'));
 		// var date = $(this).find('.date').text().split(',')[1].split(' ');
 		// var day = date[2];
 		// var month = date[1];
