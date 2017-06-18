@@ -17,6 +17,7 @@ module.exports = function(done) {
 		  if ($(this).find('.date .value-title').attr('title') == undefined) { return; }
 		  var dateRaw = $(this).find('.date .value-title').attr('title').split('T');
 		  var date = dateRaw[0].split('-')
+		  console.log(date)
 		  var day = date[2];
 		  var month = date[1];
 		  var monthNum = { 'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06','Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12' }
@@ -24,10 +25,10 @@ module.exports = function(done) {
 		  if(day.length === 1) day = '0'+day;
           var show = {
 	          venue: 'Cervantes',
-	          venueURL: 'http://www.cervantesmasterpiece.com//',
+	          venueURL: 'http://www.cervantesmasterpiece.com/',
 	          date: year + "-" + monthNum[month] + "-" + day,
 	          time: 'see website',
-	          url: $(this).find('div a').attr('href')
+	          url: 'http://www.cervantesmasterpiece.com' + $(this).find('div a').attr('href')
 	        }
         show.title = $(this).find('div a').text();
         shows.push(show)
