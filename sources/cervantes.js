@@ -14,25 +14,24 @@ module.exports = function(done) {
     }, function(err, response, body) {
       var $ = cheerio.load(body)
       $('.vevent').each(function(){
-		  var date = $(this).find('.date .value-title').attr('title');
-		  if (date == undefined) { return; }
-		  console.log(date);
-		// var date = $(this).find('.date').text().split(',')[1].split(' ');
-		// var day = date[2];
-		// var month = date[1];
-		// var monthNum = { 'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06','Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12' }
-		// var year = (new Date()).getFullYear()
-		// var time = $(this).find('.time').text();
-		// if(day.length === 1) day = '0'+day;
-        // var show = {
-        //   venue: 'Cervantes',
-        //   venueURL: 'http://www.cervantesmasterpiece.com//',
-        //   date: year + "-" + monthNum[month] + "-" + day,
-        //   time: time,
-        //   url: $(this).find('.title h3 a').attr('href')
-        // }
-        // show.title = $(this).find('.title h3').text();
-        // shows.push(show)
+		  if ($(this).find('.date .value-title').attr('title') == undefined) { return; }
+		  var dateRaw = $(this).find('.date .value-title').attr('title').split('T');
+		  var date = dateRaw[0].split('-')
+		  var day = date[2];
+		  var month = date[1];
+		  var monthNum = { 'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06','Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12' }
+		  var year = (new Date()).getFullYear()
+		  if(day.length === 1) day = '0'+day;
+          var show = {
+	          venue: 'Cervantes',
+	          venueURL: 'http://www.cervantesmasterpiece.com//',
+	          date: year + "-" + monthNum[month] + "-" + day,
+	          time: 'see website',
+	          url: $(this).find('div a').attr('href')
+	        }
+        show.title = $(this).find('div a').text();
+        shows.push(show)
+		console.log(show);
       })
 
       done(null, shows)
