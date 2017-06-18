@@ -47,11 +47,12 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
             if (show.date === year + '-' + month + '-' + day) {
                 venueHash[show.venue].tonight.push(show)
                 venueHash[show.venue].all.push(show)
-            } else if (show.date > year + '-' + month + '-' + day && show.date <= oneWeek) {
+            } else if (show.date === year + '-' + month + '-' + (today+1)) {
+				console.log(show);
+				venueHash[show.venue].one.push(show)
+			} else if (show.date > year + '-' + month + '-' + day && show.date <= oneWeek) {
 				venueHash[show.venue].soon.push(show)
 				venueHash[show.venue].all.push(show)
-			} else if (show.date === year + '-' + month + '-' + (today.getDate()+1)) {
-				venueHash[show.venue].one.push(show)
 			}
         })
         venues = Object.keys(venueHash).map(function(key) {
