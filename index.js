@@ -36,7 +36,9 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         var venueHash = {};
 
 		console.log(shows);
+		var i = 0;
         shows.forEach(function(show) {
+			console.log(i)
             if (!venueHash[show.venue]) venueHash[show.venue] = {
                 venue: show.venue,
                 venueURL: show.venueURL,
@@ -51,7 +53,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				venueHash[show.venue].soon.push(show)
 				venueHash[show.venue].all.push(show)
 			}
-
+			i += 1;
         })
         venues = Object.keys(venueHash).map(function(key) {
             return venueHash[key]
@@ -119,7 +121,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
         email = mjml(emailTemplate);
-		
+
         fs.writeFileSync(__dirname + '/email.html', email.html);
 
         log('info', 'wrote page')
