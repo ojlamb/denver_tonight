@@ -48,13 +48,13 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 venueHash[show.venue].tonight.push(show)
                 venueHash[show.venue].all.push(show)
             } else if (year + '-' + month + '-' + (today.getDate()+1)) {
-				console.log(show);
 				venueHash[show.venue].one.push(show)
 			} else if (show.date > year + '-' + month + '-' + day && show.date <= oneWeek) {
 				venueHash[show.venue].soon.push(show)
 				venueHash[show.venue].all.push(show)
 			}
         })
+		console.log(venueHash)
         venues = Object.keys(venueHash).map(function(key) {
             return venueHash[key]
         })
@@ -65,9 +65,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         html += '</div>'
         html += '<div id="tonight">'
         venues.forEach(function(venue) {
-			if (venue.one.length > 0) {
-				console.log(venue.one);
-			}
             if (venue.tonight.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
             venue.tonight.forEach(function(show, i) {
                 if (i > 0) html += '<hr>'
