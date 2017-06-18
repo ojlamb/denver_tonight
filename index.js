@@ -35,6 +35,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         var oneWeek = moment(year + '-' + month + '-' + day).add(7, 'days').format('YYYY-MM-DD');
         var venueHash = {};
 
+		console.log(shows);
         shows.forEach(function(show) {
             if (!venueHash[show.venue]) venueHash[show.venue] = {
                 venue: show.venue,
@@ -118,7 +119,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
         email = mjml(emailTemplate);
-		console.log(email)
+		
         fs.writeFileSync(__dirname + '/email.html', email.html);
 
         log('info', 'wrote page')

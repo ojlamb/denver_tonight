@@ -21,7 +21,6 @@ module.exports = function(done) {
 		  var month = date[1];
 		  var year = (new Date()).getFullYear()
 		  if(day.length === 1) day = '0'+day;
-		  console.log
           var show = {
 	          venue: 'Cervantes Masterpiece',
 	          venueURL: 'http://www.cervantesmasterpiece.com/',
