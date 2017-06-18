@@ -34,8 +34,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         if (day.length === 1) day = '0' + day
         var oneWeek = moment(year + '-' + month + '-' + day).add(7, 'days').format('YYYY-MM-DD');
         var venueHash = {};
-
-		console.log(shows);
 		var i = 0;
         shows.forEach(function(show) {
             if (!venueHash[show.venue]) venueHash[show.venue] = {
