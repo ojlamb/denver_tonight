@@ -23,13 +23,13 @@ module.exports = function(done) {
 		  if(day.length === 1) day = '0'+day;
 		  console.log
           var show = {
-	          venue: 'Cervantes',
+	          venue: 'Cervantes Masterpiece',
 	          venueURL: 'http://www.cervantesmasterpiece.com/',
 	          date: year + "-" + month + "-" + day,
 	          time: $(this).find('.start-time').first().text(),
 	          url: 'http://www.cervantesmasterpiece.com' + $(this).find('div a').attr('href')
 	        }
-        show.title = $(this).find('div a').text();
+        show.title = $(this).find('div a').text().replace('Tickets', '');
 		if(!show.title){ return; }
         shows.push(show)
       })
