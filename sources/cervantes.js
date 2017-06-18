@@ -27,7 +27,7 @@ module.exports = function(done) {
 	          venue: 'Cervantes',
 	          venueURL: 'http://www.cervantesmasterpiece.com/',
 	          date: year + "-" + month + "-" + day,
-	          time: $(this).find('h3 .start-time').text(),
+	          time: $(this).find('div h3 .start-time').text(),
 	          url: 'http://www.cervantesmasterpiece.com' + $(this).find('div a').attr('href')
 	        }
         show.title = $(this).find('div a').text();
