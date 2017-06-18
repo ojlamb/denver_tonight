@@ -16,6 +16,7 @@ module.exports = function(done) {
       $('.vevent').each(function(){
 		  var date = $(this).find('.date .value-title').attr('title');
 		  if (date == 'undefined') { return; }
+		  console.log(date);
 		// var date = $(this).find('.date').text().split(',')[1].split(' ');
 		// var day = date[2];
 		// var month = date[1];
