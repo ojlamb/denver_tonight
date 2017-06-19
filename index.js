@@ -32,7 +32,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         if (month.length === 1) month = '0' + month
         var day = today.getDate().toString()
         if (day.length === 1) day = '0' + day
-        var oneWeek = moment(year + '-' + month + '-' + day).add(7, 'days').format('YYYY-MM-DD');
+        var oneWeek = moment(year + '-' + month + '-' + day).add(6, 'days').format('YYYY-MM-DD');
         var venueHash = {};
 		var i = 0;
         shows.forEach(function(show) {
@@ -210,24 +210,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		})
 		html += '</div>'
 
-        // html += '<div class="navhead">NEXT UP'
-        // html += '<span class="date">' + moment().add(1, 'day').format('M/D') + '-' + moment().add(8, 'days').format('M/D') + '</span>'
-        // html += '</div>'
-        // html += '<div id="soon">'
-		//
-        // venues.forEach(function(venue) {
-        //     if (venue.soon.length > 0) html += '<h3><a class="venue-link" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-        //     venue.soon.forEach(function(show, i) {
-        //         if (i > 0) html += '<hr>'
-        //         html += '<div class="show">'
-        //         html += '<h4><a class="show-link" href="' + show.url + '">' + show.title + '</a></h4>'
-        //         html += '<div class="info">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</div>'
-        //         html += '<div class="info">' + show.time + '</div>'
-        //         if (show.price) html += '<div class="info">' + show.price + '</div>'
-        //         html += '</div>'
-        //     })
-        // })
-        // html += '</div>'
         page = page.split('{{content}}').join(html);
         fs.writeFileSync(__dirname + '/index.html', page);
 
