@@ -148,7 +148,6 @@ hr {
 
 .date {
   float: right;
-  height: auto
 }
 
 .navhead {
@@ -156,7 +155,7 @@ hr {
   background-color:#01C4FF;
   color: white;
   padding: 10px;
-  height: auto;
+  height: 40px;
   margin-top: 10px;
 }
 
