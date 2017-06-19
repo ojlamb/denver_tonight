@@ -329,7 +329,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
 				}
-				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
 				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
 				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
 				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
@@ -349,7 +348,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
 				}
-				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
 				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
 				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
 				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
@@ -369,7 +367,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
 				}
-				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
 				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
 				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
 				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
