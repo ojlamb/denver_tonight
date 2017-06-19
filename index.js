@@ -235,11 +235,14 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         var mjml = '';
         mjml += '<mj-column width="90%">'
         venues.forEach(function(venue) {
-            if (venue.all.length > 0) {
+            if (venue.tonight.length > 0) {
+				mjml += '<mj-column width="100%">'
+				mjml +=  '<mj-text font-weight="bold" font-size="20">Tonight</mj-text>';
+				mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
                 mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
                 mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
             }
-            venue.all.forEach(function(show, i) {
+            venue.tonight.forEach(function(show, i) {
 				var buttonText = 'Tickets'
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
@@ -251,6 +254,146 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
             })
         })
+		venues.forEach(function(venue) {
+			if (venue.one.length > 0) {
+				mjml += '<mj-column width="100%">'
+				mjml +=  '<mj-text font-weight="bold" font-size="20">' +moment().add(1, 'day').format('dddd')+'</mj-text>';
+				mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
+				mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+				mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
+			}
+			venue.one.forEach(function(show, i) {
+				var buttonText = 'Tickets'
+				if(venue.venue == 'City Park Jazz'){
+					buttonText = 'Info'
+				}
+				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
+				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+			})
+		})
+		venues.forEach(function(venue) {
+			if (venue.two.length > 0) {
+				mjml += '<mj-column width="100%">'
+				mjml +=  '<mj-text font-weight="bold" font-size="20">' +moment().add(2, 'day').format('dddd')+'</mj-text>';
+				mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
+				mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+				mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
+			}
+			venue.two.forEach(function(show, i) {
+				var buttonText = 'Tickets'
+				if(venue.venue == 'City Park Jazz'){
+					buttonText = 'Info'
+				}
+				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
+				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+			})
+		})
+		venues.forEach(function(venue) {
+			if (venue.three.length > 0) {
+				mjml += '<mj-column width="100%">'
+				mjml +=  '<mj-text font-weight="bold" font-size="20">' +moment().add(3, 'day').format('dddd')+'</mj-text>';
+				mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
+				mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+				mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
+			}
+			venue.three.forEach(function(show, i) {
+				var buttonText = 'Tickets'
+				if(venue.venue == 'City Park Jazz'){
+					buttonText = 'Info'
+				}
+				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
+				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+			})
+		})
+		venues.forEach(function(venue) {
+			if (venue.four.length > 0) {
+				mjml += '<mj-column width="100%">'
+				mjml +=  '<mj-text font-weight="bold" font-size="20">' +moment().add(4, 'day').format('dddd')+'</mj-text>';
+				mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
+				mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+				mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
+			}
+			venue.four.forEach(function(show, i) {
+				var buttonText = 'Tickets'
+				if(venue.venue == 'City Park Jazz'){
+					buttonText = 'Info'
+				}
+				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
+				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+			})
+		})
+		venues.forEach(function(venue) {
+			if (venue.five.length > 0) {
+				mjml += '<mj-column width="100%">'
+				mjml +=  '<mj-text font-weight="bold" font-size="20">' +moment().add(5, 'day').format('dddd')+'</mj-text>';
+				mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
+				mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+				mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
+			}
+			venue.five.forEach(function(show, i) {
+				var buttonText = 'Tickets'
+				if(venue.venue == 'City Park Jazz'){
+					buttonText = 'Info'
+				}
+				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
+				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+			})
+		})
+		venues.forEach(function(venue) {
+			if (venue.six.length > 0) {
+				mjml += '<mj-column width="100%">'
+				mjml +=  '<mj-text font-weight="bold" font-size="20">' +moment().add(6, 'day').format('dddd')+'</mj-text>';
+				mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
+				mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+				mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
+			}
+			venue.six.forEach(function(show, i) {
+				var buttonText = 'Tickets'
+				if(venue.venue == 'City Park Jazz'){
+					buttonText = 'Info'
+				}
+				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
+				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+			})
+		})
+		venues.forEach(function(venue) {
+			if (venue.seven.length > 0) {
+				mjml += '<mj-column width="100%">'
+				mjml +=  '<mj-text font-weight="bold" font-size="20">' +moment().add(7, 'day').format('dddd')+'</mj-text>';
+				mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
+				mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+				mjml += '<mj-divider border-color="#01C4FF"></mj-divider>';
+			}
+			venue.seven.forEach(function(show, i) {
+				var buttonText = 'Tickets'
+				if(venue.venue == 'City Park Jazz'){
+					buttonText = 'Info'
+				}
+				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
+				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+			})
+		})
 		mjml += '</mj-column>'
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
