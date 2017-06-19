@@ -255,7 +255,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
             })
         })
 		mjml += '<mj-column width="100%">'
-		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF">' +moment().add(1, 'day').format('dddd')+'</mj-text>';
+		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF"  padding-top="15px">' +moment().add(1, 'day').format('dddd')+'</mj-text>';
 		mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
 		venues.forEach(function(venue) {
 			if (venue.one.length > 0) {
@@ -275,7 +275,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			})
 		})
 		mjml += '<mj-column width="100%">'
-		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF">' +moment().add(2, 'day').format('dddd')+'</mj-text>';
+		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF"  padding-top="15px">' +moment().add(2, 'day').format('dddd')+'</mj-text>';
 		mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
 		venues.forEach(function(venue) {
 			if (venue.two.length > 0) {
@@ -295,7 +295,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			})
 		})
 		mjml += '<mj-column width="100%">'
-		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF">' +moment().add(3, 'day').format('dddd')+'</mj-text>';
+		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF"  padding-top="15px">' +moment().add(3, 'day').format('dddd')+'</mj-text>';
 		mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
 		venues.forEach(function(venue) {
 			if (venue.three.length > 0) {
@@ -315,7 +315,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			})
 		})
 		mjml += '<mj-column width="100%">'
-		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF">' +moment().add(4, 'day').format('dddd')+'</mj-text>';
+		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF"  padding-top="15px">' +moment().add(4, 'day').format('dddd')+'</mj-text>';
 		mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
 		venues.forEach(function(venue) {
 			if (venue.four.length > 0) {
@@ -335,7 +335,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			})
 		})
 		mjml += '<mj-column width="100%">'
-		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF">' +moment().add(5, 'day').format('dddd')+'</mj-text>';
+		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF"  padding-top="15px">' +moment().add(5, 'day').format('dddd')+'</mj-text>';
 		mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
 		venues.forEach(function(venue) {
 			if (venue.five.length > 0) {
@@ -355,7 +355,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			})
 		})
 		mjml += '<mj-column width="100%">'
-		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF"> ' +moment().add(6, 'day').format('dddd')+'</mj-text>';
+		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF" padding-top="15px"> ' +moment().add(6, 'day').format('dddd')+'</mj-text>';
 		mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
 		venues.forEach(function(venue) {
 			if (venue.six.length > 0) {
@@ -374,8 +374,8 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
 			})
 		})
-		mjml += '<mj-column width="100%">'
-		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF">' +moment().add(7, 'day').format('dddd')+'</mj-text>';
+		mjml += '<mj-column width="100%" >'
+		mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF" padding-top="15px">' +moment().add(7, 'day').format('dddd')+'</mj-text>';
 		mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
 		venues.forEach(function(venue) {
 			if (venue.seven.length > 0) {
