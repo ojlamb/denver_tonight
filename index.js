@@ -108,7 +108,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		})
 		html += '</div>'
 
-		html += '<div class="navhead">'+ moment().add(3, 'day').format('dddd');
+		html += '<div class="navhead">'+ moment().add(2, 'day').format('dddd');
 		html += '<span class="date">' + moment().add(2, 'day').format('M/D') + '</span>'
 		html += '</div>'
 		html += '<div id="soon">'
@@ -193,7 +193,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		})
 		html += '</div>'
 
-		html += '<div class="navhead">'+ moment().add(7, 'day').format('dddd');  
+		html += '<div class="navhead">'+ moment().add(7, 'day').format('dddd');
 		html += '<span class="date">' + moment().add(7, 'day').format('M/D') + '</span>'
 		html += '</div>'
 		html += '<div id="soon">'
