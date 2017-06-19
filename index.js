@@ -79,7 +79,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         html += '</div>'
         html += '<div id="tonight">'
         venues.forEach(function(venue) {
-            if (venue.soon.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+            if (venue.tonight.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
             venue.tonight.forEach(function(show, i) {
                 if (i > 0) html += '<hr>'
                 html += '<div class="show">'
