@@ -222,14 +222,14 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         venues.forEach(function(venue) {
             if (venue.tonight.length > 0) {
                 mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-                mjml += '<mj-divider border-color="#01C4FF" border-width=".5px" width="88%"></mj-divider>';
+                mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
             }
             venue.tonight.forEach(function(show, i) {
 				var buttonText = 'Tickets'
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
 				}
-                if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+                if (i > 0) mjml += '<mj-divider border-width=".8px" border-color="#01C4FF" width="97%" padding-bottom="3px"/>'
                 mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
                 mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
                 mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
@@ -242,14 +242,14 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		venues.forEach(function(venue) {
 			if (venue.one.length > 0) {
 				mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-				mjml += '<mj-divider border-color="#01C4FF" border-width=".5px" width="88%"></mj-divider>';
+				mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
 			}
 			venue.one.forEach(function(show, i) {
 				var buttonText = 'Tickets'
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
 				}
-				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				if (i > 0) mjml += '<mj-divider border-width=".8px" border-color="#01C4FF" width="97%" padding-bottom="3px"/>'
 				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
 				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
 				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
@@ -262,14 +262,14 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		venues.forEach(function(venue) {
 			if (venue.two.length > 0) {
 				mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-			    mjml += '<mj-divider border-color="#01C4FF" border-width=".5px" width="88%"></mj-divider>';
+			    mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
 			}
 			venue.two.forEach(function(show, i) {
 				var buttonText = 'Tickets'
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
 				}
-				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				if (i > 0) mjml += '<mj-divider border-width=".8px" border-color="#01C4FF" width="97%" padding-bottom="3px"/>'
 				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
 				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
 				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
@@ -282,14 +282,14 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		venues.forEach(function(venue) {
 			if (venue.three.length > 0) {
 				mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-				mjml += '<mj-divider border-color="#01C4FF" border-width=".5px" width="88%"></mj-divider>';
+				mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
 			}
 			venue.three.forEach(function(show, i) {
 				var buttonText = 'Tickets'
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
 				}
-				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				if (i > 0) mjml += '<mj-divider border-width=".8px" border-color="#01C4FF" width="97%" padding-bottom="3px"/>'
 				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
 				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
 				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
@@ -302,14 +302,14 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		venues.forEach(function(venue) {
 			if (venue.four.length > 0) {
 				mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-				mjml += '<mj-divider border-color="#01C4FF" border-width=".5px" width="88%"></mj-divider>';
+				mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
 			}
 			venue.four.forEach(function(show, i) {
 				var buttonText = 'Tickets'
 				if(venue.venue == 'City Park Jazz'){
 					buttonText = 'Info'
 				}
-				if (i > 0) mjml += '<mj-divider border-width=".5px" border-color="#01C4FF" width="88%" padding-bottom="3px"/>'
+				if (i > 0) mjml += '<mj-divider border-width=".8px" border-color="#01C4FF" width="97%" padding-bottom="3px"/>'
 				mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
 				mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
 				mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
@@ -322,7 +322,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		venues.forEach(function(venue) {
 			if (venue.five.length > 0) {
 				mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-				mjml += '<mj-divider border-color="#01C4FF" border-width=".5px" width="88%"></mj-divider>';
+				mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
 			}
 			venue.five.forEach(function(show, i) {
 				var buttonText = 'Tickets'
@@ -341,7 +341,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		venues.forEach(function(venue) {
 			if (venue.six.length > 0) {
 				mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-				mjml += '<mj-divider border-color="#01C4FF" border-width=".5px" width="88%"></mj-divider>';
+				mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
 			}
 			venue.six.forEach(function(show, i) {
 				var buttonText = 'Tickets'
@@ -360,7 +360,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		venues.forEach(function(venue) {
 			if (venue.seven.length > 0) {
 				mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-				mjml += '<mj-divider border-color="#01C4FF" border-width=".5px" width="88%"></mj-divider>';
+				mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
 			}
 			venue.seven.forEach(function(show, i) {
 				var buttonText = 'Tickets'
