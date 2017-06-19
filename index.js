@@ -79,7 +79,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         html += '</div>'
         html += '<div id="tonight">'
         venues.forEach(function(venue) {
-            if (venue.tonight.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+            if (venue.soon.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
             venue.tonight.forEach(function(show, i) {
                 if (i > 0) html += '<hr>'
                 html += '<div class="show">'
@@ -94,7 +94,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		html += '<div class="navhead">'
 		html += '<span class="date">' + moment().add(1, 'day').format('M/D') + '</span>'
 		html += '</div>'
-		html += '<div id="tonight">'
+		html += '<div id="soon">'
 		venues.forEach(function(venue) {
 			if (venue.one.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
 			venue.one.forEach(function(show, i) {
@@ -111,7 +111,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		html += '<div class="navhead">'
 		html += '<span class="date">' + moment().add(2, 'day').format('M/D') + '</span>'
 		html += '</div>'
-		html += '<div id="tonight">'
+		html += '<div id="soon">'
 		venues.forEach(function(venue) {
 			if (venue.two.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
 			venue.two.forEach(function(show, i) {
@@ -128,7 +128,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		html += '<div class="navhead">'
 		html += '<span class="date">' + moment().add(3, 'day').format('M/D') + '</span>'
 		html += '</div>'
-		html += '<div id="tonight">'
+		html += '<div id="soon">'
 		venues.forEach(function(venue) {
 			if (venue.three.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
 			venue.three.forEach(function(show, i) {
@@ -145,7 +145,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		html += '<div class="navhead">'
 		html += '<span class="date">' + moment().add(4, 'day').format('M/D') + '</span>'
 		html += '</div>'
-		html += '<div id="tonight">'
+		html += '<div id="soon">'
 		venues.forEach(function(venue) {
 			if (venue.four.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
 			venue.four.forEach(function(show, i) {
@@ -162,7 +162,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		html += '<div class="navhead">'
 		html += '<span class="date">' + moment().add(5, 'day').format('M/D') + '</span>'
 		html += '</div>'
-		html += '<div id="tonight">'
+		html += '<div id="soon">'
 		venues.forEach(function(venue) {
 			if (venue.five.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
 			venue.five.forEach(function(show, i) {
@@ -179,7 +179,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		html += '<div class="navhead">'
 		html += '<span class="date">' + moment().add(6, 'day').format('M/D') + '</span>'
 		html += '</div>'
-		html += '<div id="tonight">'
+		html += '<div id="soon">'
 		venues.forEach(function(venue) {
 			if (venue.six.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
 			venue.six.forEach(function(show, i) {
@@ -196,7 +196,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		html += '<div class="navhead">'
 		html += '<span class="date">' + moment().add(7, 'day').format('M/D') + '</span>'
 		html += '</div>'
-		html += '<div id="tonight">'
+		html += '<div id="soon">'
 		venues.forEach(function(venue) {
 			if (venue.seven.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
 			venue.seven.forEach(function(show, i) {
