@@ -198,3 +198,7 @@ hr {
 .about{
 	margin-top: 50px;
 }
+.logo-img {
+    height: auto;
+    max-width: 100%;
+}
