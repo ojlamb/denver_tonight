@@ -55,12 +55,10 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 all: []
             }
 
-			console.log(show.date);
-			console.log(moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(1, 'days'))
             if (show.date === year + '-' + month + '-' + day) {
                 venueHash[show.venue].tonight.push(show)
                 venueHash[show.venue].all.push(show)
-            } else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(1, 'days')) {
+            } else if (show.date == (moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(1, 'days'))) {
 				venueHash[show.venue].one.push(show)
 			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(2, 'days')) {
 				venueHash[show.venue].two.push(show)
