@@ -66,6 +66,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			} else if (show.date == year + '-' + month + '-' + (today.getDate()+6)) {
 				venueHash[show.venue].six.push(show)
 			} else if (show.date == year + '-' + month + '-' + (today.getDate()+7)) {
+				LOG.debug(show);
 				venueHash[show.venue].seven.push(show)
 			}
         })
