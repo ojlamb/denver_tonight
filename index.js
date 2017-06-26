@@ -59,6 +59,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 venueHash[show.venue].tonight.push(show)
                 venueHash[show.venue].all.push(show)
             } else if (show.date == (moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(1, 'days'))) {
+				console.log(true);
 				venueHash[show.venue].one.push(show)
 			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(2, 'days')) {
 				venueHash[show.venue].two.push(show)
