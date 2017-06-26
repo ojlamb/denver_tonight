@@ -35,7 +35,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         var day = today.getDate().toString()
         if (day.length === 1) day = '0' + day
 
-		var now = moment(year + '-' + month + '-' + day,'YYYY-MM-DD')
 		var oneWeek = moment(year + '-' + month + '-' + day).add(6, 'days').format('YYYY-MM-DD');
         var venueHash = {};
 		var i = 0;
@@ -58,20 +57,20 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
             if (show.date === year + '-' + month + '-' + day) {
                 venueHash[show.venue].tonight.push(show)
                 venueHash[show.venue].all.push(show)
-            } else if (show.date == now.add(1, 'days').format('YYYY-MM-DD')) {
-				console.log(true);
+            } else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(1, 'days').format('YYYY-MM-DD')) {
+				console.log(true)
 				venueHash[show.venue].one.push(show)
-			} else if (show.date == now.add(2, 'days').format('YYYY-MM-DD')) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(2, 'days').format('YYYY-MM-DD')) {
 				venueHash[show.venue].two.push(show)
-			} else if (show.date == now.add(3, 'days').format('YYYY-MM-DD')) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(3, 'days').format('YYYY-MM-DD')) {
 				venueHash[show.venue].three.push(show)
-			} else if (show.date == now.add(4, 'days').format('YYYY-MM-DD')) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(4, 'days').format('YYYY-MM-DD')) {
 				venueHash[show.venue].four.push(show)
-			} else if (show.date == now.add(5, 'days').format('YYYY-MM-DD')) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(5, 'days').format('YYYY-MM-DD')) {
 				venueHash[show.venue].five.push(show)
-			} else if (show.date == now.add(6, 'days').format('YYYY-MM-DD')) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(6, 'days').format('YYYY-MM-DD')) {
 				venueHash[show.venue].six.push(show)
-			} else if (show.date == now.add(7, 'days').format('YYYY-MM-DD')) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(7, 'days').format('YYYY-MM-DD')) {
 				venueHash[show.venue].seven.push(show)
 			}
         })
