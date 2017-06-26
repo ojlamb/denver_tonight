@@ -58,19 +58,19 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
             if (show.date === year + '-' + month + '-' + day) {
                 venueHash[show.venue].tonight.push(show)
                 venueHash[show.venue].all.push(show)
-            } else if (show.date == year + '-' + month + '-' + (moment(today,'YYYY-MM-DD').add(1, 'days'))) {
+            } else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(1, 'days')) {
 				venueHash[show.venue].one.push(show)
-			} else if (show.date == year + '-' + month + '-' + (today.getDate()+2)) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(2, 'days')) {
 				venueHash[show.venue].two.push(show)
-			} else if (show.date == year + '-' + month + '-' + (today.getDate()+3)) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(3, 'days')) {
 				venueHash[show.venue].three.push(show)
-			} else if (show.date == year + '-' + month + '-' + (today.getDate()+4)) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(4, 'days')) {
 				venueHash[show.venue].four.push(show)
-			} else if (show.date == year + '-' + month + '-' + (today.getDate()+5)) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(5, 'days')) {
 				venueHash[show.venue].five.push(show)
-			} else if (show.date == year + '-' + month + '-' + (today.getDate()+6)) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(6, 'days')) {
 				venueHash[show.venue].six.push(show)
-			} else if (show.date == year + '-' + month + '-' + (today.getDate()+7)) {
+			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(7, 'days')) {
 				venueHash[show.venue].seven.push(show)
 			}
         })
