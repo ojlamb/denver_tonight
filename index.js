@@ -54,23 +54,24 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 soon: [],
                 all: []
             }
-
-            if (show.date === year + '-' + month + '-' + day) {
+			console.log(now);
+			console.log(show.date);
+            if (show.date === now) {
                 venueHash[show.venue].tonight.push(show)
                 venueHash[show.venue].all.push(show)
-            } else if (show.date == year + '-' + month + '-' + (now).add(1, 'days')) {
+            } else if (show.date == (now).add(1, 'days')) {
 				venueHash[show.venue].one.push(show)
-			} else if (show.date == year + '-' + month + '-' + (now).add(2, 'days')) {
+			} else if (show.date == (now).add(2, 'days')) {
 				venueHash[show.venue].two.push(show)
-			} else if (show.date == year + '-' + month + '-' + (now).add(3, 'days')) {
+			} else if (show.date == (now).add(3, 'days')) {
 				venueHash[show.venue].three.push(show)
-			} else if (show.date == year + '-' + month + '-' + (now).add(4, 'days')) {
+			} else if (show.date == (now).add(4, 'days')) {
 				venueHash[show.venue].four.push(show)
-			} else if (show.date == year + '-' + month + '-' + (now).add(5, 'days')) {
+			} else if (show.date == (now).add(5, 'days')) {
 				venueHash[show.venue].five.push(show)
-			} else if (show.date == year + '-' + month + '-' + (now).add(6, 'days')) {
+			} else if (show.date == (now).add(6, 'days')) {
 				venueHash[show.venue].six.push(show)
-			} else if (show.date == year + '-' + month + '-' + (now).add(7, 'days')) {
+			} else if (show.date == (now).add(7, 'days')) {
 				venueHash[show.venue].seven.push(show)
 			}
         })
