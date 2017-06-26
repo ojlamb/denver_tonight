@@ -50,12 +50,11 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
                 soon: [],
                 all: []
             }
-			console.log(show.date);
-			console.log(today.getDate()+7)
+			console.log(moment(today,'YYYY-MM-DD').add(1, 'days'))
             if (show.date === year + '-' + month + '-' + day) {
                 venueHash[show.venue].tonight.push(show)
                 venueHash[show.venue].all.push(show)
-            } else if (show.date == year + '-' + month + '-' + (today.getDate()+1)) {
+            } else if (show.date == year + '-' + month + '-' + (moment(today,'YYYY-MM-DD').add(1, 'days'))) {
 				venueHash[show.venue].one.push(show)
 			} else if (show.date == year + '-' + month + '-' + (today.getDate()+2)) {
 				venueHash[show.venue].two.push(show)
