@@ -113,9 +113,8 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         mjml += '<mj-column width="90%">'
 		for(i = 0; i < 8; i++) {
 			var night = hashKey[i];
-			mjml += '<mj-column width="100%">'
 			mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF">Tonight</mj-text>';
-			mjml +=  '<mj-divider border-color="#D0057A"></mj-divider></mj-column>';
+			mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';
 			venues.forEach(function(venue) {
 				if (venue[night].length > 0) {
 					mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
@@ -138,6 +137,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
         email = mjml(emailTemplate);
+		console.log(email);
 
         fs.writeFileSync(__dirname + '/email.html', email.html);
 
