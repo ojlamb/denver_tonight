@@ -78,7 +78,6 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		var html = ''
 		for(i = 0; i < 8; i++) {
 			var night = hashKey[i];
-
 			if (night == 'tonight') {
 				html += '<div class="navhead">TONIGHT';
 			    html += '<span class="date">' + moment().format('M/D') + '</span>';
@@ -112,7 +111,11 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         mjml += '<mj-column width="90%">'
 		for(i = 0; i < 8; i++) {
 			var night = hashKey[i];
-			mjml +=  '<mj-text font-weight="bold" font-size="26" color="#01C4FF">Tonight</mj-text>';
+			if (night == 'tonight') {
+				mjml += '<mj-text font-weight="bold" font-size="26" color="#01C4FF">Tonight</mj-text>';
+			} else {
+				html += '<mj-text font-weight="bold" font-size="26" color="#01C4FF">'+ moment().add(i, 'day').format('dddd') +'</mj-text>'; 
+			}
 			mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';
 			venues.forEach(function(venue) {
 				if (venue[night].length > 0) {
