@@ -75,146 +75,145 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
             return venueHash[key]
         })
 
-		for(i = 0; i < 9; i++) {
-
-			console.log(hashKey[i])
+		var html = ''
+		for(i = 0; i < 8; i++) {
+			var night = hashKey[i];
+			html += night == 'tonight' ? '<div class="navhead">TONIGHT' : moment().add(1, 'day').format('dddd');
+			html += '<span class="date">' + moment().format('M/D') + '</span>'
+			html += '</div>'
+			html += '<div id="tonight">'
+			venues.forEach(function(venue) {
+				if (venue[night].length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+				venue[night].forEach(function(show, i) {
+					if (i > 0) html += '<hr>'
+					html += '<div class="show">'
+					html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
+					html += '<div class="info">' + show.time + '</div>'
+					if (show.price) html += '<div class="info">' + show.price + '</div>'
+					html += '</div>'
+				})
+			})
+			html += '</div>'
 		}
-        var html = ''
-        html += '<div class="navhead">TONIGHT'
-        html += '<span class="date">' + moment().format('M/D') + '</span>'
-        html += '</div>'
-        html += '<div id="tonight">'
-        venues.forEach(function(venue) {
-            if (venue.tonight.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-            venue.tonight.forEach(function(show, i) {
-                if (i > 0) html += '<hr>'
-                html += '<div class="show">'
-                html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
-                html += '<div class="info">' + show.time + '</div>'
-                if (show.price) html += '<div class="info">' + show.price + '</div>'
-                html += '</div>'
-            })
-        })
-        html += '</div>'
-
-		html += '<div class="navhead">' + moment().add(1, 'day').format('dddd');
-		html += '<span class="date">' + moment().add(1, 'day').format('M/D') + '</span>';
-		html += '</div>'
-		html += '<div id="soon">'
-		venues.forEach(function(venue) {
-			if (venue.one.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-			venue.one.forEach(function(show, i) {
-				if (i > 0) html += '<hr>'
-				html += '<div class="show">'
-				html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
-				html += '<div class="info">' + show.time + '</div>'
-				if (show.price) html += '<div class="info">' + show.price + '</div>'
-				html += '</div>'
-			})
-		})
-		html += '</div>'
-
-		html += '<div class="navhead">'+ moment().add(2, 'day').format('dddd');
-		html += '<span class="date">' + moment().add(2, 'day').format('M/D') + '</span>'
-		html += '</div>'
-		html += '<div id="soon">'
-		venues.forEach(function(venue) {
-			if (venue.two.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-			venue.two.forEach(function(show, i) {
-				if (i > 0) html += '<hr>'
-				html += '<div class="show">'
-				html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
-				html += '<div class="info">' + show.time + '</div>'
-				if (show.price) html += '<div class="info">' + show.price + '</div>'
-				html += '</div>'
-			})
-		})
-		html += '</div>'
-
-		html += '<div class="navhead">'+ moment().add(3, 'day').format('dddd');
-		html += '<span class="date">' + moment().add(3, 'day').format('M/D') + '</span>'
-		html += '</div>'
-		html += '<div id="soon">'
-		venues.forEach(function(venue) {
-			if (venue.three.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-			venue.three.forEach(function(show, i) {
-				if (i > 0) html += '<hr>'
-				html += '<div class="show">'
-				html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
-				html += '<div class="info">' + show.time + '</div>'
-				if (show.price) html += '<div class="info">' + show.price + '</div>'
-				html += '</div>'
-			})
-		})
-		html += '</div>'
-
-		html += '<div class="navhead">'+ moment().add(4, 'day').format('dddd');
-		html += '<span class="date">' + moment().add(4, 'day').format('M/D') + '</span>'
-		html += '</div>'
-		html += '<div id="soon">'
-		venues.forEach(function(venue) {
-			if (venue.four.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-			venue.four.forEach(function(show, i) {
-				if (i > 0) html += '<hr>'
-				html += '<div class="show">'
-				html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
-				html += '<div class="info">' + show.time + '</div>'
-				if (show.price) html += '<div class="info">' + show.price + '</div>'
-				html += '</div>'
-			})
-		})
-		html += '</div>'
-
-		html += '<div class="navhead">'+ moment().add(5, 'day').format('dddd');
-		html += '<span class="date">' + moment().add(5, 'day').format('M/D') + '</span>'
-		html += '</div>'
-		html += '<div id="soon">'
-		venues.forEach(function(venue) {
-			if (venue.five.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-			venue.five.forEach(function(show, i) {
-				if (i > 0) html += '<hr>'
-				html += '<div class="show">'
-				html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
-				html += '<div class="info">' + show.time + '</div>'
-				if (show.price) html += '<div class="info">' + show.price + '</div>'
-				html += '</div>'
-			})
-		})
-		html += '</div>'
-
-		html += '<div class="navhead">'+ moment().add(6, 'day').format('dddd');
-		html += '<span class="date">' + moment().add(6, 'day').format('M/D') + '</span>'
-		html += '</div>'
-		html += '<div id="soon">'
-		venues.forEach(function(venue) {
-			if (venue.six.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-			venue.six.forEach(function(show, i) {
-				if (i > 0) html += '<hr>'
-				html += '<div class="show">'
-				html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
-				html += '<div class="info">' + show.time + '</div>'
-				if (show.price) html += '<div class="info">' + show.price + '</div>'
-				html += '</div>'
-			})
-		})
-		html += '</div>'
-
-		html += '<div class="navhead">'+ moment().add(7, 'day').format('dddd');
-		html += '<span class="date">' + moment().add(7, 'day').format('M/D') + '</span>'
-		html += '</div>'
-		html += '<div id="soon">'
-		venues.forEach(function(venue) {
-			if (venue.seven.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
-			venue.seven.forEach(function(show, i) {
-				if (i > 0) html += '<hr>'
-				html += '<div class="show">'
-				html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
-				html += '<div class="info">' + show.time + '</div>'
-				if (show.price) html += '<div class="info">' + show.price + '</div>'
-				html += '</div>'
-			})
-		})
-		html += '</div>'
+		//
+		// html += '<div class="navhead">' + moment().add(1, 'day').format('dddd');
+		// html += '<span class="date">' + moment().add(1, 'day').format('M/D') + '</span>';
+		// html += '</div>'
+		// html += '<div id="soon">'
+		// venues.forEach(function(venue) {
+		// 	if (venue.one.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+		// 	venue.one.forEach(function(show, i) {
+		// 		if (i > 0) html += '<hr>'
+		// 		html += '<div class="show">'
+		// 		html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
+		// 		html += '<div class="info">' + show.time + '</div>'
+		// 		if (show.price) html += '<div class="info">' + show.price + '</div>'
+		// 		html += '</div>'
+		// 	})
+		// })
+		// html += '</div>'
+		//
+		// html += '<div class="navhead">'+ moment().add(2, 'day').format('dddd');
+		// html += '<span class="date">' + moment().add(2, 'day').format('M/D') + '</span>'
+		// html += '</div>'
+		// html += '<div id="soon">'
+		// venues.forEach(function(venue) {
+		// 	if (venue.two.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+		// 	venue.two.forEach(function(show, i) {
+		// 		if (i > 0) html += '<hr>'
+		// 		html += '<div class="show">'
+		// 		html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
+		// 		html += '<div class="info">' + show.time + '</div>'
+		// 		if (show.price) html += '<div class="info">' + show.price + '</div>'
+		// 		html += '</div>'
+		// 	})
+		// })
+		// html += '</div>'
+		//
+		// html += '<div class="navhead">'+ moment().add(3, 'day').format('dddd');
+		// html += '<span class="date">' + moment().add(3, 'day').format('M/D') + '</span>'
+		// html += '</div>'
+		// html += '<div id="soon">'
+		// venues.forEach(function(venue) {
+		// 	if (venue.three.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+		// 	venue.three.forEach(function(show, i) {
+		// 		if (i > 0) html += '<hr>'
+		// 		html += '<div class="show">'
+		// 		html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
+		// 		html += '<div class="info">' + show.time + '</div>'
+		// 		if (show.price) html += '<div class="info">' + show.price + '</div>'
+		// 		html += '</div>'
+		// 	})
+		// })
+		// html += '</div>'
+		//
+		// html += '<div class="navhead">'+ moment().add(4, 'day').format('dddd');
+		// html += '<span class="date">' + moment().add(4, 'day').format('M/D') + '</span>'
+		// html += '</div>'
+		// html += '<div id="soon">'
+		// venues.forEach(function(venue) {
+		// 	if (venue.four.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+		// 	venue.four.forEach(function(show, i) {
+		// 		if (i > 0) html += '<hr>'
+		// 		html += '<div class="show">'
+		// 		html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
+		// 		html += '<div class="info">' + show.time + '</div>'
+		// 		if (show.price) html += '<div class="info">' + show.price + '</div>'
+		// 		html += '</div>'
+		// 	})
+		// })
+		// html += '</div>'
+		//
+		// html += '<div class="navhead">'+ moment().add(5, 'day').format('dddd');
+		// html += '<span class="date">' + moment().add(5, 'day').format('M/D') + '</span>'
+		// html += '</div>'
+		// html += '<div id="soon">'
+		// venues.forEach(function(venue) {
+		// 	if (venue.five.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+		// 	venue.five.forEach(function(show, i) {
+		// 		if (i > 0) html += '<hr>'
+		// 		html += '<div class="show">'
+		// 		html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
+		// 		html += '<div class="info">' + show.time + '</div>'
+		// 		if (show.price) html += '<div class="info">' + show.price + '</div>'
+		// 		html += '</div>'
+		// 	})
+		// })
+		// html += '</div>'
+		//
+		// html += '<div class="navhead">'+ moment().add(6, 'day').format('dddd');
+		// html += '<span class="date">' + moment().add(6, 'day').format('M/D') + '</span>'
+		// html += '</div>'
+		// html += '<div id="soon">'
+		// venues.forEach(function(venue) {
+		// 	if (venue.six.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+		// 	venue.six.forEach(function(show, i) {
+		// 		if (i > 0) html += '<hr>'
+		// 		html += '<div class="show">'
+		// 		html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
+		// 		html += '<div class="info">' + show.time + '</div>'
+		// 		if (show.price) html += '<div class="info">' + show.price + '</div>'
+		// 		html += '</div>'
+		// 	})
+		// })
+		// html += '</div>'
+		//
+		// html += '<div class="navhead">'+ moment().add(7, 'day').format('dddd');
+		// html += '<span class="date">' + moment().add(7, 'day').format('M/D') + '</span>'
+		// html += '</div>'
+		// html += '<div id="soon">'
+		// venues.forEach(function(venue) {
+		// 	if (venue.seven.length > 0) html += '<h3><a class="venue-link" target="_blank" href="' + venue.venueURL + '">' + venue.venue + '</a></h3>'
+		// 	venue.seven.forEach(function(show, i) {
+		// 		if (i > 0) html += '<hr>'
+		// 		html += '<div class="show">'
+		// 		html += '<h4><a class="show-link" href="' + show.url + '" target="_blank">' + show.title + '</a></h4>'
+		// 		html += '<div class="info">' + show.time + '</div>'
+		// 		if (show.price) html += '<div class="info">' + show.price + '</div>'
+		// 		html += '</div>'
+		// 	})
+		// })
+		// html += '</div>'
 
 
 
