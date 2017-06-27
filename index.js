@@ -37,7 +37,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 
 		var oneWeek = moment(year + '-' + month + '-' + day).add(6, 'days').format('YYYY-MM-DD');
         var venueHash = {};
-		var hashKey = {"tonight": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7}
+		var hashKey = {0:"tonight", 1: "one", 2: "two", 3: "three", 4: "four",5: "five",6: "six",7: "seven"}
 		var i = 0;
         shows.forEach(function(show) {
             if (!venueHash[show.venue]) venueHash[show.venue] = {
@@ -76,6 +76,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         })
 
 		for(i = 0; i < 9; i++) {
+
 			console.log(hashKey[i])
 		}
         var html = ''
