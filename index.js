@@ -85,7 +85,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				html += '</div>'
 				html += '<div id="tonight">'
 			} else {
-				html += moment().add(i, 'day').format('dddd');
+				html +=  '<div class="navhead">' + moment().add(i, 'day').format('dddd');
 				html += '<span class="date">' + moment().add(i, 'day').format('M/D') + '</span>';
 				html += '</div>'
 				html += '<div id="soon">'
