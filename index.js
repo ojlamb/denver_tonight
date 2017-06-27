@@ -37,6 +37,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 
 		var oneWeek = moment(year + '-' + month + '-' + day).add(6, 'days').format('YYYY-MM-DD');
         var venueHash = {};
+		var hashKey = {"tonight": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7}
 		var i = 0;
         shows.forEach(function(show) {
             if (!venueHash[show.venue]) venueHash[show.venue] = {
@@ -49,16 +50,12 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 				four: [],
 				five: [],
 				six: [],
-				seven: [],
-                soon: [],
-                all: []
+				seven: []
             }
 
             if (show.date === year + '-' + month + '-' + day) {
                 venueHash[show.venue].tonight.push(show)
-                venueHash[show.venue].all.push(show)
             } else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(1, 'days').format('YYYY-MM-DD')) {
-				console.log(true)
 				venueHash[show.venue].one.push(show)
 			} else if (show.date == moment(year + '-' + month + '-' + day,'YYYY-MM-DD').add(2, 'days').format('YYYY-MM-DD')) {
 				venueHash[show.venue].two.push(show)
@@ -78,6 +75,9 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
             return venueHash[key]
         })
 
+		for(i = 0; i < 9; i++) {
+			console.log(hashKey[i])
+		}
         var html = ''
         html += '<div class="navhead">TONIGHT'
         html += '<span class="date">' + moment().format('M/D') + '</span>'
@@ -214,6 +214,8 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			})
 		})
 		html += '</div>'
+
+
 
         page = page.split('{{content}}').join(html);
         fs.writeFileSync(__dirname + '/index.html', page);
