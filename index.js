@@ -78,8 +78,13 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		var html = ''
 		for(i = 0; i < 8; i++) {
 			var night = hashKey[i];
-			html += night == 'tonight' ? '<div class="navhead">TONIGHT' : moment().add(1, 'day').format('dddd');
-			html += '<span class="date">' + moment().format('M/D') + '</span>'
+			if (night == 'tonight') {
+				html += '<div class="navhead">TONIGHT';
+			    html += '<span class="date">' + moment().format('M/D') + '</span>';
+			} else {
+				html += moment().add(i, 'day').format('dddd');
+				html += '<span class="date">' + moment().add(i, 'day').format('M/D') + '</span>';
+			}
 			html += '</div>'
 			html += '<div id="tonight">'
 			venues.forEach(function(venue) {
