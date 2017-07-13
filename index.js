@@ -169,7 +169,9 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			mjml += '</mj-accordion-text>'
 			mjml += '</mj-accordion-element>'
 			mjml += '</mj-accordion>'
-			mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';
+			if (i<7){
+			   mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';	
+			}
 		}
 
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
