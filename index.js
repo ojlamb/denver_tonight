@@ -141,8 +141,8 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         var mjml = '';
         mjml += '<mj-column width="90%">'
 		mjml += '<mj-spacer></mj-spacer>';
-		mjml += '<mj-accordion>'
 		for(i = 0; i < 8; i++) {
+			mjml += '<mj-accordion>'
 			mjml += '<mj-accordion-element>'
 			var night = hashKey[i];
 			if (night == 'tonight') {
@@ -168,8 +168,10 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			})
 			mjml += '</mj-accordion-text>'
 			mjml += '</mj-accordion-element>'
+			mjml += '</mj-accordion>'
+			mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';
 		}
-		mjml += '</mj-accordion>'
+
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
         email = mjml(emailTemplate);
