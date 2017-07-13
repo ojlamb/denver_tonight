@@ -181,7 +181,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 					mjml += '<span style="text-align: center; font-weigh:700;" color="#D0057A" text-decoration="none"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></span>'
 				})
 				if (venue[night].length > 0) {
-				 mjml +='<div></div>'
+				 mjml +='<div style="padding-bottom:15px;"></div>'
 				}
 			})
 			mjml += '</mj-accordion-text>'
