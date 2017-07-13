@@ -168,7 +168,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			mjml += '<mj-accordion-text>'
 			venues.forEach(function(venue) {
 				if (venue[night].length > 0) {
-					mjml += ' <div style="font-size:20px; text-align:left; color:#000; font-weight: 700; border-bottom: 1px solid #01C4FF;padding-bottom:5px;">' + venue.venue + '<br>'
+					mjml += ' <div style="font-size:20px; text-align:left; color:#000; font-weight: 700; border-bottom: 1px solid #01C4FF;padding-bottom:5px;">' + venue.venue + '</div><br>'
 				}
 				venue[night].forEach(function(show, i) {
 					var buttonText = 'Tickets'
@@ -181,7 +181,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 					mjml += '<span style="text-align: center; font-weigh:700;" color="#D0057A" text-decoration="none"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></span>'
 				})
 				if (venue[night].length > 0) {
-				 mjml +='</div>'
+				 mjml +='<div></div>'
 				}
 			})
 			mjml += '</mj-accordion-text>'
