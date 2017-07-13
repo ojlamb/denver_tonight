@@ -162,13 +162,13 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		delete hashKey.tonight;
 		for(i = 0; i < 7; i++) {
 			mjml += '<mj-accordion>'
-			mjml += '<mj-accordion-element>'
+			mjml += '<mj-accordion-element padding-bottom="15px">'
 			var night = hashKey[i];
 			mjml += '<mj-accordion-title>'+ moment().add(i, 'day').format('dddd') +'</mj-accordion-title>';
 			mjml += '<mj-accordion-text>'
 			venues.forEach(function(venue) {
 				if (venue[night].length > 0) {
-					mjml += ' <div style="font-size:20px; text-align:left; color:#000; font-weight: 700; border-bottom: 1px solid #01C4FF;padding-bottom:3px;">' + venue.venue + '</div><br>'
+					mjml += ' <div style="font-size:20px; text-align:left; color:#000; font-weight: 700; border-bottom: 1px solid #01C4FF;padding-bottom:5px;">' + venue.venue + '</div><br>'
 				}
 				venue[night].forEach(function(show, i) {
 					var buttonText = 'Tickets'
@@ -184,7 +184,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			mjml += '</mj-accordion-text>'
 			mjml += '</mj-accordion-element>'
 			mjml += '</mj-accordion>'
-			if (i<7){
+			if (i<6){
 			   mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';
 			}
 		}
@@ -192,7 +192,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
         email = mjml(emailTemplate);
-		console.log(email)
+
         fs.writeFileSync(__dirname + '/email.html', email.html);
 
         log('info', 'wrote page')
