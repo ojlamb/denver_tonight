@@ -106,35 +106,68 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
         page = page.split('{{content}}').join(html);
         fs.writeFileSync(__dirname + '/index.html', page);
 
-        log('info', 'write mjml');
+        // log('info', 'write mjml');
+        // var mjml = '';
+        // mjml += '<mj-column width="90%">'
+		// for(i = 0; i < 8; i++) {
+		// 	var night = hashKey[i];
+		// 	mjml += '<mj-spacer></mj-spacer>'
+		// 	if (night == 'tonight') {
+		// 		mjml += '<mj-text font-weight="bold" font-size="26" color="#01C4FF">Tonight</mj-text>';
+		// 	} else {
+		// 		mjml += '<mj-text font-weight="bold" font-size="26" color="#01C4FF">'+ moment().add(i, 'day').format('dddd') +'</mj-text>';
+		// 	}
+		// 	mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';
+		// 	venues.forEach(function(venue) {
+		// 		if (venue[night].length > 0) {
+		// 			mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+		// 			mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
+		// 		}
+		// 		venue[night].forEach(function(show, i) {
+		// 			var buttonText = 'Tickets'
+		// 			if(venue.venue == 'City Park Jazz'){
+		// 				buttonText = 'Info'
+		// 			}
+		// 			if (i > 0) mjml += '<mj-divider border-width=".8px" border-color="#01C4FF" width="97%" padding-bottom="3px"/>'
+		// 			mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
+		// 			mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
+		// 			mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
+		// 			mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+		// 		})
+		// 	})
+		// }
+		// mjml += '</mj-column>'
+		log('info', 'write mjml');
         var mjml = '';
         mjml += '<mj-column width="90%">'
+		mjml += '<mj-spacer></mj-spacer>';
+		mjml += '<mj-accordion>'
 		for(i = 0; i < 8; i++) {
+			mjml += '<mj-accordion-element>'
+			mjml += '<mj-accordion-text>'
 			var night = hashKey[i];
-			mjml += '<mj-spacer></mj-spacer>'
 			if (night == 'tonight') {
-				mjml += '<mj-text font-weight="bold" font-size="26" color="#01C4FF">Tonight</mj-text>';
+				mjml += '<mj-accordion-title>Tonight</mj-accordion-title>';
 			} else {
-				mjml += '<mj-text font-weight="bold" font-size="26" color="#01C4FF">'+ moment().add(i, 'day').format('dddd') +'</mj-text>';
+				mjml += '<mj-accordion-title>'+ moment().add(i, 'day').format('dddd') +'</mj-accordion-title>';
 			}
-			mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';
 			venues.forEach(function(venue) {
 				if (venue[night].length > 0) {
-					mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
-					mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
+					mjml += ' <div style="font-size:20px; text-align:left; color:#000; font-weight: 700; border-bottom: 1px solid #01C4FF;padding-bottom:3px;">' + venue.venue + '</div><br>'
 				}
 				venue[night].forEach(function(show, i) {
 					var buttonText = 'Tickets'
 					if(venue.venue == 'City Park Jazz'){
 						buttonText = 'Info'
 					}
-					if (i > 0) mjml += '<mj-divider border-width=".8px" border-color="#01C4FF" width="97%" padding-bottom="3px"/>'
-					mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
-					mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
-					mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
-					mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+					mjml += ' <span font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</span><br><br>'
+					mjml += '<span>' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '<span><br>'
+					mjml += '<span>' + show.time + '</span>'
+					mjml += '<span style="text-align: center; font-weigh:700;" color="#D0057A" text-decoration="none"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></span>'
 				})
 			})
+			mjml += '</mj-accordion-text>'
+			mjml += '</mj-accordion-element>'
 		}
 		mjml += '</mj-column>'
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
