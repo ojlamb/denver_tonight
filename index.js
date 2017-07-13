@@ -162,7 +162,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		delete hashKey.tonight;
 		for(i = 0; i < 7; i++) {
 			mjml += '<mj-accordion>'
-			mjml += '<mj-accordion-element padding-bottom="15px">'
+			mjml += '<mj-accordion-element>'
 			var night = hashKey[i];
 			mjml += '<mj-accordion-title>'+ moment().add(i, 'day').format('dddd') +'</mj-accordion-title>';
 			mjml += '<mj-accordion-text>'
@@ -178,7 +178,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 					mjml += ' <span font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</span><br><br>'
 					mjml += '<span>' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '<span><br>'
 					mjml += '<span>' + show.time + '</span>'
-					mjml += '<span style="text-align: center; font-weigh:700;" color="#D0057A" text-decoration="none"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></span>'
+					mjml += '<span style="text-align: center; font-weigh:700;margin-bottom="15px"" color="#D0057A" text-decoration="none"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></span>'
 				})
 			})
 			mjml += '</mj-accordion-text>'
