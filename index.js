@@ -169,7 +169,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			mjml += '</mj-accordion-text>'
 			mjml += '</mj-accordion-element>'
 		}
-		mjml += '</mj-column>'
+		mjml += '</mj-accordion>'
         emailTemplate = emailTemplate.split('{{content}}').join(mjml);
         var mjml = require('mjml').mjml2html;
         email = mjml(emailTemplate);
