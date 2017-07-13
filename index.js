@@ -175,7 +175,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 					if(venue.venue == 'City Park Jazz'){
 						buttonText = 'Info'
 					}
-					mjml += ' <span style="font-size:18px;font-weight:700; padding-top:5px; color: #000">' + show.title + '</span><br><br>'
+					mjml += ' <span style="font-size:16px;font-weight:700; padding-top:5px; color: #000">' + show.title + '</span><br><br>'
 					mjml += '<span>' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '<span><br>'
 					mjml += '<span>' + show.time + '</span>'
 					mjml += '<span style="text-align: center; font-weigh:700;" color="#D0057A" text-decoration="none"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></span>'
