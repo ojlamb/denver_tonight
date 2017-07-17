@@ -1236,3 +1236,16 @@
 [Fri Jul 14 2017 15:19:48 GMT-0600 (MDT)] [info] found 196 total shows
 [Fri Jul 14 2017 15:19:48 GMT-0600 (MDT)] [info] write mjml
 [Fri Jul 14 2017 15:19:50 GMT-0600 (MDT)] [info] wrote page
+[Fri Jul 14 2017 15:19:53 GMT-0600 (MDT)] [info] pushed to github
+[Sat Jul 15 2017 00:16:41 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:31:25 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:31:28 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:31:34 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:31:41 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:32:31 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:33:57 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:34:12 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:40:03 GMT-0600 (MDT)] [info] fetching sources
+[Mon Jul 17 2017 08:40:06 GMT-0600 (MDT)] [info] found 191 total shows
+[Mon Jul 17 2017 08:40:06 GMT-0600 (MDT)] [info] write mjml
+[Mon Jul 17 2017 08:40:09 GMT-0600 (MDT)] [info] wrote page
