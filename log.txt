@@ -1294,3 +1294,9 @@
 [Mon Jul 24 2017 13:09:06 GMT-0600 (MDT)] [info] found 192 total shows
 [Mon Jul 24 2017 13:09:06 GMT-0600 (MDT)] [info] write mjml
 [Mon Jul 24 2017 13:09:08 GMT-0600 (MDT)] [info] wrote page
+[Mon Jul 24 2017 13:09:11 GMT-0600 (MDT)] [info] pushed to github
+[Fri Jul 28 2017 07:46:08 GMT-0700 (PDT)] [info] fetching sources
+[Fri Jul 28 2017 09:17:06 GMT-0700 (PDT)] [info] fetching sources
+[Fri Jul 28 2017 09:17:09 GMT-0700 (PDT)] [info] found 191 total shows
+[Fri Jul 28 2017 09:17:09 GMT-0700 (PDT)] [info] write mjml
+[Fri Jul 28 2017 09:17:11 GMT-0700 (PDT)] [info] wrote page
