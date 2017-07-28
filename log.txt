@@ -1304,3 +1304,7 @@
 [Thu Jul 27 2017 12:11:01 GMT-0600 (MDT)] [info] found 190 total shows
 [Thu Jul 27 2017 12:11:01 GMT-0600 (MDT)] [info] write mjml
 [Thu Jul 27 2017 12:11:03 GMT-0600 (MDT)] [info] wrote page
+[Fri Jul 28 2017 12:06:11 GMT-0700 (PDT)] [info] fetching sources
+[Fri Jul 28 2017 12:06:15 GMT-0700 (PDT)] [info] found 191 total shows
+[Fri Jul 28 2017 12:06:15 GMT-0700 (PDT)] [info] write mjml
+[Fri Jul 28 2017 12:06:17 GMT-0700 (PDT)] [info] wrote page
