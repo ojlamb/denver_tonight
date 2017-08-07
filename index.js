@@ -132,7 +132,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 					mjml += '<mj-text font-size="20px" font-weight="500" padding-top="5px" padding-bottom="0px" color="#000">' + show.title + '</mj-text>'
 					mjml += '<mj-text padding-bottom="0px" padding-top="0px">' + show.date.split('-')[1] + '/' + show.date.split('-')[2] + '/' + show.date.split('-')[0] + '</mj-text>'
 					mjml += '<mj-text padding-top="0px">' + show.time + '</mj-text>'
-					mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700" padding-bottom="5px"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
+					mjml += '<mj-text align="center" font-size="18" color="#D0057A" text-decoration="none" font-weight="700" padding-bottom="25px"><a style="text-decoration: none; color:#D0057A" href="' + show.url + '">'+buttonText+'</a></mj-text>'
 				})
 			})
 		}
