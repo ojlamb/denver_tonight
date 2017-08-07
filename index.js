@@ -120,7 +120,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 			mjml +=  '<mj-divider border-color="#D0057A"></mj-divider>';
 			venues.forEach(function(venue) {
 				if (venue[night].length > 0) {
-					mjml += '<mj-text font-size="20px" align="left" color="#000" font-weight="700">' + venue.venue + '</mj-text>'
+					mjml += '<mj-text font-size="24px" align="left" color="#000" font-weight="bold">' + venue.venue + '</mj-text>'
 					mjml += '<mj-divider border-color="#01C4FF" border-width=".8px" width="97%"></mj-divider>';
 				}
 				venue[night].forEach(function(show, i) {
