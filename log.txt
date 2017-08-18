@@ -1400,3 +1400,7 @@
 [Fri Aug 18 2017 18:12:52 GMT+0000 (UTC)] [info] found 186 total shows
 [Fri Aug 18 2017 18:12:52 GMT+0000 (UTC)] [info] write mjml
 [Fri Aug 18 2017 18:12:53 GMT+0000 (UTC)] [info] wrote page
+[Fri Aug 18 2017 19:02:03 GMT+0000 (UTC)] [info] fetching sources
+[Fri Aug 18 2017 19:02:06 GMT+0000 (UTC)] [info] found 187 total shows
+[Fri Aug 18 2017 19:02:06 GMT+0000 (UTC)] [info] write mjml
+[Fri Aug 18 2017 19:02:08 GMT+0000 (UTC)] [info] wrote page
