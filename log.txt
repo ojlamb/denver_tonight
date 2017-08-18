@@ -1395,3 +1395,8 @@
 [Fri Aug 18 2017 08:55:28 GMT-0600 (MDT)] [info] found 185 total shows
 [Fri Aug 18 2017 08:55:29 GMT-0600 (MDT)] [info] write mjml
 [Fri Aug 18 2017 08:55:31 GMT-0600 (MDT)] [info] wrote page
+[Fri Aug 18 2017 08:55:34 GMT-0600 (MDT)] [info] pushed to github
+[Fri Aug 18 2017 18:12:48 GMT+0000 (UTC)] [info] fetching sources
+[Fri Aug 18 2017 18:12:52 GMT+0000 (UTC)] [info] found 186 total shows
+[Fri Aug 18 2017 18:12:52 GMT+0000 (UTC)] [info] write mjml
+[Fri Aug 18 2017 18:12:53 GMT+0000 (UTC)] [info] wrote page
