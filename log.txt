@@ -1513,3 +1513,7 @@
 [Sat Sep 02 2017 11:41:26 GMT-0600 (MDT)] [info] found 187 total shows
 [Sat Sep 02 2017 11:41:26 GMT-0600 (MDT)] [info] write mjml
 [Sat Sep 02 2017 11:41:29 GMT-0600 (MDT)] [info] wrote page
+[Wed Sep 06 2017 10:58:33 GMT-0600 (MDT)] [info] fetching sources
+[Wed Sep 06 2017 10:58:38 GMT-0600 (MDT)] [info] found 195 total shows
+[Wed Sep 06 2017 10:58:38 GMT-0600 (MDT)] [info] write mjml
+[Wed Sep 06 2017 10:58:40 GMT-0600 (MDT)] [info] wrote page
