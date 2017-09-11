@@ -1527,3 +1527,8 @@
 [Mon Sep 11 2017 09:02:18 GMT-0600 (MDT)] [info] found 198 total shows
 [Mon Sep 11 2017 09:02:18 GMT-0600 (MDT)] [info] write mjml
 [Mon Sep 11 2017 09:02:20 GMT-0600 (MDT)] [info] wrote page
+[Mon Sep 11 2017 09:02:23 GMT-0600 (MDT)] [info] pushed to github
+[Mon Sep 11 2017 09:03:58 GMT-0600 (MDT)] [info] fetching sources
+[Mon Sep 11 2017 09:04:02 GMT-0600 (MDT)] [info] found 198 total shows
+[Mon Sep 11 2017 09:04:02 GMT-0600 (MDT)] [info] write mjml
+[Mon Sep 11 2017 09:04:04 GMT-0600 (MDT)] [info] wrote page
