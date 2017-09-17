@@ -202,8 +202,17 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 
         log('info', 'wrote page')
 
-        childProcess.exec('cd ' + __dirname + ';git add .; git commit -m "refresh"; git push origin gh-pages;', function() {
-            log('info', 'pushed to github')
+        childProcess.exec('cd ' + __dirname +
+		'aws s3 cp index.html s3://denvertonight.co/index.html;'+
+		'aws s3 cp email.html s3://denvertonight.co/email.html;'+
+		'aws s3 cp favicon.ico s3://denvertonight.co/favicon.ico;'+
+		'aws s3 cp logo.png s3://denvertonight.co/logo.png;'+
+		'aws s3 cp thumbnail.png s3://denvertonight.co/thumbnail.png;'+
+		'aws s3 cp favicon.ico s3://denvertonight.co/favicon.ico;'+
+		'aws s3 cp about.html s3://denvertonight.co/about.html;'+
+		'aws s3 cp subscribe.html s3://denvertonight.co/subscribe.html;'
+		'', function() {
+            log('info', 'pushed to S3')
         })
     })
 })
