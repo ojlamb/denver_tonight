@@ -210,7 +210,7 @@ fs.readdir(__dirname + '/sources', function(err, dirs) {
 		'aws s3 cp thumbnail.png s3://denvertonight.co/thumbnail.png;'+
 		'aws s3 cp favicon.ico s3://denvertonight.co/favicon.ico;'+
 		'aws s3 cp about.html s3://denvertonight.co/about.html;'+
-		'aws s3 cp subscribe.html s3://denvertonight.co/subscribe.html;'
+		'aws s3 cp subscribe.html s3://denvertonight.co/subscribe.html;'+
 		'', function() {
             log('info', 'pushed to S3')
         })
